@@ -1,4 +1,4 @@
-# Boolean Logic and the Cauchy-Schwarz Inequality
+# Boolean Logic
 
 <div style="display: none;">
 <!-- MathJax macro definitions. -->
@@ -73,11 +73,12 @@ Bi-implication/"if and only if"
 
 ### Propositions
 
-Also called sentences, propositions are statements that are either `true` or `false`. We'll be representing them with capital letters.
+Also called sentences, propositions are statements that are either `true` or `false`. We'll be representing them with capital letters. For example, `A`.
 
-### DeMorgan's Law
+### DeMorgan's Laws
 
 
 
 ## References
+ - Lecture notes published for quiz section
  - Lecture
