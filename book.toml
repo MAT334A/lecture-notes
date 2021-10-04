@@ -7,3 +7,8 @@ title = "Math 334 Lecture Notes"
 
 [output.html]
 mathjax-support = true
+curly-quotes = true
+
+[output.html.playground]
+editable = true
+
