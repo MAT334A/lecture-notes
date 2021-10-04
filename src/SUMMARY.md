@@ -1,3 +1,6 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
+<!-- Reference https://rust-lang.github.io/mdBook/format/summary.html -->
+
+- [About](./about.md)
+- [Week 1](./week_1.md)
