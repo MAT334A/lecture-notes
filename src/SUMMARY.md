@@ -13,5 +13,5 @@
     - [Using it]()
 
 # Week 2
-- [Inner Products and Projection]()
-- [Set Definitions]()
+- [Inner Products and Projection](./week_2/projections.md)
+- [Set Definitions](./week_2/set_definitions.md)

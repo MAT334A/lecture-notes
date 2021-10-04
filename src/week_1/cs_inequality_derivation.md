@@ -1,20 +1,8 @@
-# The Cauchy-Schwarz Inequality
+# The Cauchy-Schwarz Inequality Derivation
 
-<div style="display: none;">
-<!-- LaTeX definitions -->
+{{#include ../tex_common.md}}
 
-\\[
-% \lv is short for "vector left"
-\def\lv{\left\<}
-\def\rv{\right\>}
-\def\iprod#1{\lv #1 \rv}
-\\]
-
-</div>
-
-## Derivation
-
-### Getting the quadratic
+## Getting the quadratic
 Let \\(x, y \in \mathbb{R}^n\\) and \\(t \in \mathbb{R}\\). This proof uses the fact that \\(\iprod{x, x} = ||x||^2 \geq 0\\), as well as that \\(\iprod{x, y} = \iprod{y, x}\\) and that \\(\iprod{x + y, z} = \iprod{x, z} + \iprod{y, z}\\).
 \\[
 \begin{aligned}
@@ -33,7 +21,7 @@ Let \\(x, y \in \mathbb{R}^n\\) and \\(t \in \mathbb{R}\\). This proof uses the 
 Let \\(f(t) = t^2\iprod{y, y} - 2t\iprod{x, y} + \iprod{x, x}\\). Notice that \\(f\\) is a quadratic function of \\(t\\)!
 
 
-### Graphing it
+## Graphing it
 
 <details><summary>Graph: <math><mi>f(t)</mi><mo>&geq;</mo><mi>0</mi></math></summary>
 <iframe src="https://www.desmos.com/calculator/x6kvupelri?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
@@ -59,7 +47,7 @@ Keeping in mind that we constrain \\(x \neq 0 \neq y\\),
 \end{aligned}
 \\]
 
-### Using the minimum
+## Using the minimum
 
 That \\(f\left(t_{\text{min}}\right) \geq 0\\) implies that all other \\(f(t) \geq 0\\), and so is a **very strong statement**. Let's see what we get if we substitute \\(t_{\text{min}}\\) into our inequality!
 
@@ -88,5 +76,5 @@ Note that \\(0 \leq \iprod{x, y}^2\\) because \\(x, y \in \mathbb{R}^n\\). As su
 \end{aligned}
 \\]
 
-We now have the Cauchy-Schwarz Inequality! `🙂`.
+We now have the Cauchy-Schwarz Inequality! 🙂.
 
