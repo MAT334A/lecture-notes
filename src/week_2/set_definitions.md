@@ -51,7 +51,7 @@ Again, if \\(S \subseteq \mathbb{R}^n\\),
 
 Less formally, a set is closed if it includes all of its boundary points.
 
-## A `Open` Set
+## An `Open` Set
 
 \\(S\\) is `open` iff \\(\partial S \subseteq S^C\\).
 
