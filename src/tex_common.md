@@ -9,6 +9,8 @@
 \def\proj#1#2{\textsf{proj}_{#1} #2}
 \def\norm#1{\left|\left| #1 \right|\right|}
 \def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
 \def\R{\mathbb{R}}
 \def\Q{\mathbb{Q}}
 \def\Z{\mathbb{Z}}

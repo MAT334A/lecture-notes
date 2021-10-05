@@ -13,7 +13,7 @@ The Cauchy-Schwarz inequality can be used to show, among other things, that the 
 Correlation
 
 \\[
- {\iprod{x, y}}{\norm{x}\norm{y}}
+ \frac{\iprod{x, y}}{\norm{x}\norm{y}}
 \\]
 
 `TODO`

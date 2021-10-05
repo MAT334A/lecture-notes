@@ -68,9 +68,33 @@ Bi-implication/"if and only if"
 
 Also called sentences, propositions are statements that are either `true` or `false`. We'll be representing them with capital letters. For example, `A`.
 
-### DeMorgan's Laws
+## DeMorgan's Laws
 
+\\[
+ \neg \left( A \vee B \right) = \neg A \wedge \neg B
+\\]
+and
+\\[
+ \neg \left( A \wedge B \right) = \neg A \vee \neg B
+\\]
 
+## Precedence
+
+Conventionally, \\(\wedge\\) has higher precedence than \\(\vee\\) and \\(\neg\\) has higher precedence than \\(\wedge\\). This means that \\(A \vee \neg B \wedge C = A \vee ((\neg B) \wedge C)\\), because operators with higher precedence are **evaluated/applied first**.
+
+## Applying DeMorgan's Laws to \\(\exists\\) and \\(\forall\\)
+
+First, it's useful to define \\(\exists x. P(x) := \vee_{x \in D} P(x) \\) and \\(\forall x. P(x) := \wedge_{x \in D} P(x)\\), where \\(D\\) is some domain we're interested in.
+
+Using these definitions, we get:
+
+\\[
+\begin{aligned}
+ \neg \left(\exists x. x \neq 0\right) \iff \forall x. \left(x = 0\right)
+\end{aligned}
+\\]
+
+`TODO`
 
 ## References
  - Lecture notes published for quiz section
