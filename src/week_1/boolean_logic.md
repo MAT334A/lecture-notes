@@ -1,14 +1,7 @@
 # Boolean Logic
 
-<div style="display: none;">
-<!-- MathJax macro definitions. -->
+{{#include ../tex_common.md}}
 
-\\(
-\def\T{\texttt{T}}
-\def\F{\texttt{F}}
-\\)
-
-</div>
 <!--
 We use \\(math here\\) for inline math and \\[math here\\] for display/block math.
 See https://rust-lang.github.io/mdBook/format/mathjax.html for details.

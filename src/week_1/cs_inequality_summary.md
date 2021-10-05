@@ -1,5 +1,7 @@
 # The Cauchy-Schwarz Inequality
 
+{{#include ../tex_common.md}}
+
 \\[
 \left|\left\<x, y\right\>\right| \leq ||x|| \cdot ||y||
 \\]
