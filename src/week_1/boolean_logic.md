@@ -90,7 +90,8 @@ Using these definitions, we get:
 
 \\[
 \begin{aligned}
- \neg \left(\exists x. x \neq 0\right) \iff \forall x. \left(x = 0\right)
+ \neg \left(\exists x. x \neq 0\right) \iff \forall x. \left(x = 0\right) \\\\
+ \neg \left(\forall x. x \neq 0\right) \iff \exists x. \left(x \neq 0\right)
 \end{aligned}
 \\]
 

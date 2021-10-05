@@ -76,5 +76,5 @@ Note that \\(0 \leq \iprod{x, y}^2\\) because \\(x, y \in \mathbb{R}^n\\). As su
 \end{aligned}
 \\]
 
-We now have the Cauchy-Schwarz Inequality! 🙂.
+We now have the Cauchy-Schwarz Inequality! <span style="float: right;">🙂</span>
 
