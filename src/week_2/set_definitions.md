@@ -28,20 +28,39 @@ Note that the \\(\setminus\\) operator is `\setminus` in \\(\LaTeX\\). It comput
 
 ## `Interior Point` of a Set
 
-`TODO`
+A point \\(x \in \mathbb{R}^n\\) is an **interior point** of a set, \\(S\subseteq \mathbb{R}^n\\), iff \\(\forall r.\  B(x, r) \cap S \neq \emptyset\\), where \\(\emptyset\\) is the empty set.
 
-## `Boundary Point` of a Set
+In other words, if we can make a ball around \\(x\\) that intersects \\(S\\) arbitrarially small (but still with non-zero size), then it is an interior point of \\(S\\).
 
-`TODO`
+```
+TODO: Include a demo here.
+```
 
-## An `Open` Set
+## `Boundary Points` of a Set
 
-`TODO`
+We denote the boundary points of a set with \\(\partial S\\).
+
+Again, if \\(S \subseteq \mathbb{R}^n\\),
+\\[
+ \partial S := \left\\{x \in \mathbb{R}^n\ :\ \forall r. \left(\left(B(x, r) \cap S \neq \emptyset \right)\wedge \left(B(x, r) \cap S^C \neq \emptyset \right)\right) \right\\}
+\\]
 
 ## A `Closed` Set
 
-`TODO`
+\\(S\\) is `closed` iff \\(\partial S \subseteq S\\).
+
+Less formally, a set is closed if it includes all of its boundary points.
+
+## A `Open` Set
+
+\\(S\\) is `open` iff \\(\partial S \subseteq S^C\\).
+
+Less formally, a set is open if it includes **none** of its boundary points.
+
+## Sets can be both open and closed
+
+Note that sets with no boundary points are **both** open and closed. Similarly, sets that contain only _some_ of their boundary points are neither open nor closed.
 
 ## The `Closure` of a Set
 
-\\(\bar{S}\\)
+\\(\bar{S} = S \cup \partial S\\)
