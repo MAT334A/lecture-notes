@@ -32,7 +32,7 @@ A point \\(x \in \mathbb{R}^n\\) is an **interior point** of a set, \\(S\subsete
 
 In other words, if we can make a ball around \\(x\\) that intersects \\(S\\) arbitrarially small (but still with non-zero size), then it is an interior point of \\(S\\).
 
-```
+```none
 TODO: Include a demo here.
 ```
 
