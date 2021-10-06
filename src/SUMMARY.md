@@ -15,6 +15,7 @@
 # Week 2
 - [Inner Products and Projection](./week_2/projections.md)
 - [Set Definitions](./week_2/set_definitions.md)
+- [Set Theorems and Limits](./week_2/set_thms_limits.md)
 
 ----
 

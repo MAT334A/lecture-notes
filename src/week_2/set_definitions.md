@@ -10,6 +10,8 @@ A ball is a set of points. If we let \\(n = 2\\), then it is an [open disk](http
 
 Notice that we're writing "\\(\norm{x - y} < r\\)" with a `<`, not a `≤`. This means that the points that are a distance \\(r\\) from \\(x\\), the center of the ball, **are not in the ball \\(B(x, r)\\)**.
 
+_Note: It is common to use the alternate and equivalent notation_ \\(B_r(x)\\) _for_ \\(B(x, r)\\)_._
+
 ## A `Bounded Set`
 
 A set, \\(S \subseteq \R^n\\), is **bounded** iff there exists \\(x \in \R^n\\) and \\(r > 0\\) such that \\(S \subseteq B(x, r)\\).
@@ -70,3 +72,9 @@ Note that sets with no boundary points are **both** open and closed. A common ex
 We define the closure of a set as \\(\bar{S} := S \cup \partial S\\).
 
 In English, the closure of \\(S\\) is \\(S\\) and its boundary points.
+
+## The `Neighborhood` of a Point
+
+For \\(x \in \R^n\\), the neighborhood of \\(x\\) is _any_ set \\(S\\) such that \\(x\\) is an interior point of \\(S\\); i.e. a set such that it is possible to draw a ball with a sufficiently small radius at \\(x\\) fully contained in the set.
+
+The notion of a neighborhood is frequently used when it's important to establish a proposition about points close to \\(x\\).
