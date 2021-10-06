@@ -8,14 +8,12 @@ The Cauchy-Schwarz inequality can be used to show, among other things, that the 
 
 Let's say that \\(x, y \in \R^n\\). We can then construct the triangle with sides \\(x, y\\) and \\(x + y\\).
 
-We then have,
-\\[
-\begin{aligned}
- \norm{x + y}^2 &= \iprod{x, y}
-\end{aligned}
-\\]
+Recall that \\(\norm{x + y}^2 = \iprod{x, y}\\).
 
-We want to show that \\(\norm{x + y} \leq \norm{x} + \norm{y}\\). Let's start by squaring both sides.
+We want to show that the longest side is shorter than the two shorter sides' lengths added together.
+In other words, we want to show \\(\norm{x + y} \leq \norm{x} + \norm{y}\\).
+
+Let's start by squaring both sides.
 \\[
  \norm{x + y}^2 \leq \left(\norm{x} + \norm{y}\right)^2
 \\]
