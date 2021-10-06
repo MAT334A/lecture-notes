@@ -15,3 +15,10 @@
 # Week 2
 - [Inner Products and Projection](./week_2/projections.md)
 - [Set Definitions](./week_2/set_definitions.md)
+
+----
+
+# Contributing to this project
+- [Working on GitHub](./contributing/online_editing.md)
+- [Working Locally](./contributing/working_locally.md)
+- [Working With `mdbook`'s Markdown](./contributing/mdbook_markdown.md)
