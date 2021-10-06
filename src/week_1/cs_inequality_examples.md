@@ -46,8 +46,10 @@ As such, we have \\(\iprod{x, y} \leq \left(\norm{x} + \norm{y}\right)^2\\). Fro
 If we have two vectors, \\(x, y \in \R^n\\), then we define the [correlation](http://sepwww.stanford.edu/sep/prof/waves/rnd/paper_html/node22.html) to be:
 
 \\[
- c = \frac{\iprod{x, y}}{\norm{x}\norm{y}}
+ c = \frac{\iprod{x', y'}}{\norm{x'}\norm{y'}}
 \\]
+
+where \\(x' = (x_1 - \bar{x}, x_2 - \bar{x}, ..., x_n - \bar{x})\\) and \\(y' = (y_1 - \bar{y}, y_2 - \bar{y}, ..., y_n - \bar{y})\\), and \\(\bar{x}\\) and \\(\bar{y}\\) are the means of the values of \\(x\\) and \\(y\\) respectively. (Essentially, using \\(x'\\) and \\(y'\\) ensures that the mean of values of both vectors is zero.)
 
 We can bound correlation using the Cauchy-Schwarz Inequality:
 \\[
@@ -63,4 +65,8 @@ We can bound correlation using the Cauchy-Schwarz Inequality:
 \\]
 
 As such, \\(\abs{c} \leq 1\\), and so, \\(-1 \leq c \leq 1\\).<span style="float: right;">☺</span>
+
+### Sidenote
+
+For those familiar with the identity \\(\iprod{x, y} = \cos\theta\norm{x}\norm{y}\\), note that correlation is just the cosine of the angle between the vectors. If correlation is very close to \\(1\\), then \\(\cos\theta\\) is very close to \\(1\\) and hence \\(\theta\\) is close to \\(0\\), so the values of the two vectors increase and decrease together (the essence of correlation). Similarly, if correlation is close to \\(0\\), then \\(\theta\\) is roughly \\(\frac{\pi}{2}\\), and the values do whatever they want (the essence of no correlation).
 
