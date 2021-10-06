@@ -32,9 +32,9 @@ A point \\(x \in \R^n\\) is an **interior point** of a set, \\(S\subseteq \R^n\\
 
 In other words, if we can find a "small enough" ball (but still with non-zero size) around \\(x\\) that is a subset of \\(S\\), then it is an interior point of \\(S\\).
 
-```none
-TODO: Include a demo here.
-```
+<details><summary>Interior Point Demonstration</summary>
+<iframe src="https://www.desmos.com/calculator/7izucmc1fz?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</details>
 
 ## `Boundary Points` of a Set
 
