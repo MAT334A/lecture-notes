@@ -1,6 +1,4 @@
 # Working on GitHub
-<<<<<<< HEAD
-=======
 
 Making changes to the book directly through GitHub allows members of the `MAT334` GitHub organization to contribute to this work without installing `mdbook` or `git`.
 
@@ -23,4 +21,3 @@ Note, however, that it can take several minutes for the rendered book to update.
 
 ![](./clicking_create_pr.png)
 
->>>>>>> 0fd6f8abccf9f93cfe3510165ecc9d3580bba04d

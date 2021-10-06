@@ -1,6 +1,4 @@
 # Working Locally
-<<<<<<< HEAD
-=======
 
 Working with the markdown for this document locally requires some setup. Let's start by `cloning` the GitHub repository &mdash; creating a local copy on your device.
 
@@ -99,5 +97,3 @@ If not, [download `mdbook`](https://github.com/rust-lang/mdBook/releases) from i
    * Changing a file should cause the served copy of the book to update.
 
 
-
->>>>>>> 0fd6f8abccf9f93cfe3510165ecc9d3580bba04d

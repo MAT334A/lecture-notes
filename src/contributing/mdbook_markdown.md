@@ -1,6 +1,4 @@
 # Working With mdbook's Markdown
-<<<<<<< HEAD
-=======
 
 ## MathJax
 
@@ -46,4 +44,3 @@ Let's give the dropdown a descriptive title (which, unfortunately, is difficult 
 
 **When embedding graphs, it is very useful to adjust the `window` (under `Graph Settings`)!**
 
->>>>>>> 0fd6f8abccf9f93cfe3510165ecc9d3580bba04d
