@@ -4,7 +4,65 @@
 
 `mdbook` uses MathJax to render \\(\LaTeX\\)-like math. It isn't as powerful as full \\(\LaTeX\\).
 
+<table>
+  <tr><th><code>\\(</code>, <code>\\)</code></th>  <td>Enter/exit <b>inline</b> math mode. Note the double-backslash!</td></tr>
+  <tr><th><code>\\[</code>, <code>\\]</code></th>  <td>Enter/exit <b>block</b> math mode.</td></tr>
+</table>
+
+For example, to write \\(e^{i\theta} = \cos \theta + i \sin \theta\\) in both block and inline math mode,
+```md
+In inline mode, \\(e^{i\theta} = \cos \theta + i \sin\theta\\).
+
+Below this line, in block mode,
+\\[
+  e^{i\theta} = \cos\theta + i\sin\theta
+\\]
+```
+
+...which gives us...
+<div style = "border: 1px solid grey; border-radius: 5px; padding: 4px;">
+
+In inline mode, \\(e^{i\theta} = \cos \theta + i \sin\theta\\).
+
+Below this line, in block mode,
+\\[
+  e^{i\theta} = \cos\theta + i\sin\theta
+\\]
+
+</div>
+
+If we want to stack equations, we use `\\[\begin{aligned} ... \end{aligned}\\]`. For example,
+
+\\[
+\begin{aligned}
+         & 5 + x &= x + 5\\\\
+ \implies& 5     &=     5
+\end{aligned}
+\\]
+
+...is...
+
+```tex
+
+\\[
+\begin{aligned}
+         & 5 + x &= x + 5\\\\
+ \implies& 5     &=     5
+\end{aligned}
+\\]
+```
+
+Note that the `&` characters are used for alignment and we use **four** back-slashes to start a new line.
+
 This section is unfinished. For now, please reference [`src/week_1/cs_inequality_derivation.md`](https://github.com/MAT334A/lecture-notes/blob/main/src/week_1/cs_inequality_derivation.md?plain=1).
+
+## Including Files
+
+```md
+\{{#include file.md}}
+```
+
+[`mdbook` lets you include files](https://rust-lang.github.io/mdBook/format/mdbook.html). Like a C-language `#include`, `mdbook` just removes our include statement and inserts the contents of the file we specify.
 
 ## Embedding Graphs
 
