@@ -23,7 +23,11 @@ Let \\(f(t) = t^2\iprod{y, y} - 2t\iprod{x, y} + \iprod{x, x}\\). Notice that \\
 
 ## Graphing it
 
-<details><summary>Graph: <math><mi>f(t)</mi><mo>&geq;</mo><mi>0</mi></math></summary>
+<details><summary>Graph of
+
+\\(f(t)\\)
+
+</summary>
 <iframe src="https://www.desmos.com/calculator/x6kvupelri?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 </details>
 
