@@ -9,6 +9,8 @@ title = "Math 334 Lecture Notes"
 mathjax-support = true
 curly-quotes = true
 git-repository-url = "https://github.com/MAT334A/lecture-notes"
+additional-css = ["./src/style.css"]
+additional-js = ["./src/script.js"]
 
 [output.html.playground]
 editable = true
