@@ -96,4 +96,22 @@ If not, [download `mdbook`](https://github.com/rust-lang/mdBook/releases) from i
  * `./mdbook serve` will start a local server (its output will tell you its URL). Opening it in your browser lets you preview the book.
    * Changing a file should cause the served copy of the book to update.
 
+----
+
+## Git Troubleshooting
+
+### Push Failure
+
+Pushing can fail if the server has changes you don't.
+
+![](./git_push_need_fetch.png)
+
+If this happens, you can `merge` the remote changes or `rebase` your commits on top of them. Rebasing can help keep the `git` history simple, so let's use it.
+
+```bash
+bash$ git fetch
+bash$ git rebase
+```
+
+`git fetch` gets the changes from the server, **but doesn't apply them**. `git rebase` then applies your changes to the server's. [For more information about rebasing, see this document.](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
 
