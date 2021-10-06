@@ -72,7 +72,7 @@ Note that \\(0 \leq \iprod{x, y}^2\\) because \\(x, y \in \mathbb{R}^n\\). As su
  \implies 0 \leq \sqrt{\iprod{x, y}^2} &\leq \sqrt{\iprod{x, x}\iprod{y, y}}\\\\
  \implies 0 \leq \left|\iprod{x, y}\right| &\leq \sqrt{\iprod{x, x}}\sqrt{\iprod{y, y}}\\\\
  \implies 0 \leq \left|\iprod{x, y}\right| &\leq \sqrt{||x||^2}\sqrt{||y||^2}\\\\
- \implies 0 \leq \left|\iprod{x, y}\right| &\leq ||x|| ||y||^2
+ \implies 0 \leq \left|\iprod{x, y}\right| &\leq ||x|| ||y||
 \end{aligned}
 \\]
 
