@@ -42,7 +42,7 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-Above, we can see that I have uncommitted changes in "src/contributing/". Let's add those changes to `git`s:
+Above, we can see that I have uncommitted changes in "src/contributing/". Let's add those changes to `git`:
 ```sh
 bash$ git add ./src
 bash$ git status

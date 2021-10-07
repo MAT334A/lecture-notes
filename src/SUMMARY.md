@@ -16,6 +16,8 @@
 - [Inner Products and Projection](./week_2/projections.md)
 - [Set Definitions](./week_2/set_definitions.md)
 - [Set Theorems and Limits](./week_2/set_thms_limits.md)
+    - [Connecting Boolean and Set Operators](./week_2/boolean_and_set_operators.md)
+    - [Open, Closed, and Completion](./week_2/set_open_closed_completion.md)
 
 ----
 
