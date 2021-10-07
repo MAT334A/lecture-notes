@@ -1,6 +1,6 @@
 # About
 
-These are the lecture notes for MATH 33X 2021-2022, taught by Professor Stefan Steinerberger. If there is something wrong with the notes, please contact Henry H or Nelson S in the MATH 33X Discord. :)
+These are the lecture notes for MATH 33X 2021-2022, taught by Professor Stefan Steinerberger. If there is something wrong with the notes, please contact Henry H or Nelson S in the MATH 33X Discord. 😀
 
 If you would like to contribute to these notes, contact Henry H with your GitHub username to be able to clone and push to this repository.
 
