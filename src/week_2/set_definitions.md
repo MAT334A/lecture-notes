@@ -51,6 +51,17 @@ Intuitively, \\(x\\) is a boundary point of \\(S\\) iff any ball centered at \\(
 
 Note that it is possible that \\(\partial S = \emptyset\\).
 
+Here's a nice diagram that visualizes a few of our terms so far.
+
+![A visual of a set, its boundary points, and its complement](./set_definitions_diagram.svg)
+
+> **Note:**
+>
+> Visuals, like the one above, can be helpful, but they can also be <span style="font-family: chiller;">dangerous</span>! It's easy to think that because you can draw some sets, you can draw **all** sets!
+>
+> A good example of a hard-to-draw set is the [_Cantor Set_](https://en.wikipedia.org/wiki/Cantor_set).
+> 
+
 ## A `Closed` Set
 
 \\(S\\) is `closed` iff \\(\partial S \subseteq S\\).
@@ -63,16 +74,7 @@ Less formally, a set is closed if it includes _all_ of its boundary points.
 
 Less formally, a set is open if it includes _none_ of its boundary points.
 
-> **Note:**
->
-> ![A visual of a set, its boundary points, and its complement](./set_definitions_diagram.svg)
->
-> Visuals, like the one above, can be helpful, but they can also be <span style="font-family: chiller;">dangerous</span>! It's easy to think that because you can draw some sets, you can draw **all** sets!
->
-> A good example of a hard-to-draw set is the [_Cantor Set_](https://en.wikipedia.org/wiki/Cantor_set).
-> 
-
-# Sets can be both open and closed
+### Sets can be both open and closed
 
 Note that sets with no boundary points are **both** open and closed. A common example is \\(S = \R^n\\), where \\(\partial S\\) is empty as \\(S^c\\) is empty. Thus, \\(S\\) is both closed (vacuously) and open, and such sets are commonly called _clopen_ sets. Similarly, sets that contain only _some_ of their boundary points are neither open nor closed.
 

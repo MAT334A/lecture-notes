@@ -22,7 +22,7 @@ The following pairs of statements are equivalent.
 
 Let's prove the case where \\(S\\) is open!
 
-> **Note:** The case where \\(S\\) is closed can be shown using an argument similar to that presented below.
+> **Note:** The case where \\(S\\) is closed can be shown as a consequence of the first case - just plug in \\(S^c\\) for \\(S\\) and remember that \\((S^c)^c = S\\)!
 >
 
 Because \\(S\\) is open, then all of the boundary points of \\(S\\) must be outside of \\(S\\). Translated into math, \\(\partial S \subseteq \R^n \setminus S\\).
