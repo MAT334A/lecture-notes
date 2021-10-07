@@ -38,6 +38,8 @@ In other words, if we can find a "small enough" ball (but still with non-zero si
 <iframe src="https://www.desmos.com/calculator/7izucmc1fz?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 </details>
 
+We define \\(S^{\text{int}} := \left\\{ x : \left(\exists r.\ B(x, r) \subseteq S \right)\right\\}\\). In other words, \\(S^{\text{int}}\\) is the set of all interior points of \\(S\\).
+
 ## `Boundary Points` of a Set
 
 We denote the boundary points of a set with \\(\partial S\\). (In \\(\LaTeX\\), \\(\partial\\) is typed as `\partial`.)

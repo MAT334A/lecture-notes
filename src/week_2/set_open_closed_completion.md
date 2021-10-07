@@ -16,8 +16,7 @@ We've learned what open and closed sets are. We know what it means to complete a
 >
 > Clearly, we have \\(\bar{\Q} = \Q \cap \partial \R = \Q \cap \R = \R\\).
 >
-> ... but \\(\R\\) has no boundary points! As such, \\(\partial \Q \neq \partial \bar{\Q}\\) because \\(\partial \bar{\Q} = \partial \R = \emptyset\\).<span style="float: right;">☺</span>
+> ... but \\(\R\\) has no boundary points! As such, \\(\partial \Q \neq \partial \overline{\Q}\\) because \\(\partial \overline{\Q} = \partial \R = \emptyset\\).<span style="float: right;">☺</span>
 >
 
-Let \\(S\\) be a closed set.
-`TODO`
+Let \\(S\\) be an arbitrary set. Then \\(\overline{\bar{S}} = \overline{S}\\).
