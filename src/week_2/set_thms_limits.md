@@ -26,4 +26,10 @@ However, remember the definition of the boundary of \\(S\\), that is, all points
 
 # The Definition of a Limit
 
-`TODO: Type`
+The classical definition of a limit for a function \\(f:\R\rightarrow\R\\), the **epsilon-delta** definition, states that \\(\lim_{x \to x_0} f(x) = L \iff \forall \epsilon > 0 \enspace \exists \delta > 0. \enspace |x - x_0| < \delta \implies |f(x) - L| < \epsilon\\). Replacing the absolute value with a norm yields the generalized definition for \\(f:\R^n\rightarrow\R\\).
+
+\\[
+   \lim_{x \to x_0} f(x) = L \iff \forall \epsilon > 0 \enspace \exists \delta > 0. \enspace ||x - x_0|| < \delta \implies |f(x) - L| < \epsilon 
+\\]
+
+Intuitively, by forcing \\(x\\) to be in a sufficiently small neighborhood of \\(x_0\\), we can guarantee that the value of \\(f(x)\\) is arbitrarily close to \\(L\\).
