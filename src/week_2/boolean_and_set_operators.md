@@ -6,6 +6,25 @@ The proofs we did with [boolean logic](../week_1/boolean_logic.md) can be applie
 
 Say we have sets \\(S\\) and \\(T\\), and propositions \\(A\\) and \\(B\\). In general, we can map boolean operators to set operators:
 
+<style>
+/* Give the set operation diagrams a minimum width to prevent them from disappearing on small-width screens. */
+img.set_op_demo {
+    min-width: 40px;
+    border-radius: 4px;
+
+    transition: 0.3s ease transform, 0.4s ease box-shadow;
+}
+
+
+/* Devices with thin screens. */
+@media (max-width: 640px) {
+    /* Make the image easier to see on hover. */
+    img.set_op_demo:hover {
+        box-shadow: 0 0 2px rgba(100, 100, 100, 0.5);
+        transform: translate(-50%, -10%) scale(2.3);
+    }
+}
+</style>
 <table>
 <thead><th>Boolean Operator</th><th>Set Operation</th><th></th>
 <tbody>
@@ -19,7 +38,7 @@ Say we have sets \\(S\\) and \\(T\\), and propositions \\(A\\) and \\(B\\). In g
 
 </td><td>
 
-![Any element in S union T is in S OR T](./set_operations/union.svg)
+<img alt="Any element in S union T is in S OR T" src="./set_operations/union.svg" class="set_op_demo"/>
 
 </td></tr>
 <tr><td>
@@ -32,7 +51,7 @@ Say we have sets \\(S\\) and \\(T\\), and propositions \\(A\\) and \\(B\\). In g
 
 </td><td>
 
-![Any element in S intersection is in S AND T](./set_operations/intersection.svg)
+<img alt="Any element in S intersection is in S AND T" src="./set_operations/intersection.svg" class="set_op_demo"/>
 
 </td></tr>
 <tr><td>
@@ -45,7 +64,7 @@ Say we have sets \\(S\\) and \\(T\\), and propositions \\(A\\) and \\(B\\). In g
 
 </td><td>
 
-![Any element in S's complement is not in S](./set_operations/complement.svg)
+<img alt="Any element in S's complement is not in S" src="./set_operations/complement.svg" class="set_op_demo"/>
 
 </td></tr>
 <tr><td>
@@ -58,7 +77,7 @@ Say we have sets \\(S\\) and \\(T\\), and propositions \\(A\\) and \\(B\\). In g
 
 </td><td>
 
-![Any element in S is also in T](./set_operations/equals.svg)
+<img alt="Any element in S is also in T" src="./set_operations/equals.svg" class="set_op_demo"/>
 
 </td></tr>
 </tbody></table>
