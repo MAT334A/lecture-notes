@@ -15,8 +15,8 @@ Because \\(x \in \partial \overline{S}\\), \\(B(x, r)\\) contains \\(y \in \over
 Expanding the definition of \\(\overline{S}\\),
 \\[
 \begin{aligned}
- &y\in \overline{S}\\
- \implies& y \in S \cup \partial S\\
+ &y\in \overline{S}\\\\
+ \implies& y \in S \cup \partial S\\\\
 \end{aligned}
 \\]
 
@@ -27,8 +27,8 @@ As such, \\(y\\) is in either \\(S\\) or \\(\partial S\\) (or both!).
 We now just need to show that our ball contains a point in \\(S^c\\). We'll do this using point \\(z\\):
 \\[
 \begin{aligned}
- &z \in \overline{S}^c\\
- \implies& z \in \left(S \cup \partial S\right)^c\\
+ &z \in \overline{S}^c\\\\
+ \implies& z \in \left(S \cup \partial S\right)^c\\\\
  \implies& z \in S^c \cap \left(\partial S\right)^c && \texttt{...from DeMorgan's laws}
 \end{aligned}
 \\]
