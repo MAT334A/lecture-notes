@@ -4,7 +4,7 @@ Working with the markdown for this document locally requires some setup. Let's s
 
 ## Installing `git`
 
-For `Linux`, `MacOS`, and `Windows`, follow [this tutorial to install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). (Git may require additional configuration.](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+For `Linux`, `MacOS`, and `Windows`, follow [this tutorial to install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). [Git may require additional configuration.](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
 You may also want to [set up GitHub SSH authentication](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) so that you don't have to supply your GitHub credentials when pushing (saving) your code to GitHub.
 
