@@ -70,7 +70,15 @@ We defined \\(\overline{S} = \partial S \cup S\\). As such,
 \end{aligned}
 \\]
 
-`TODO`
+Above we showed that \\(\partial \bar{S} \subseteq \partial S\\). As such, \\(\partial\bar{S} \subseteq \overline{\bar{S}}\\), satisfying the definition of "closed".<span style="float: right;">☺</span>
+
+## Intersections of open sets
+
+``TODO``
+
+## Union of closed sets
+
+``TODO``
 
 ## References
  * Section on 10/7/21
