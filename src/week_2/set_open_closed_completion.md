@@ -83,17 +83,31 @@ Let us first show that the intersection of a finite number of open sets is open.
 
 Let \\(x \in S\\) be given. We must have \\(x \in S_i\\) for all \\(S_i\\). As \\(S_i\\) is open, there exists some \\(r_i > 0\\) such that for any \\(0 < r \le r_i\\), we know that \\(B(x, r)\\) is a subset of \\(S_i\\). 
 
-Consider the values \\R: \{r_1, r_2, ..., r_n\}\\). Let \\(r_k \in R\\) be such that \\(r_i \ge r_k\\) for any \\(r_i \in R\\). Therefore, \\(B(x, r_k)\\) is a subset of every \\(S_i\\), and is therefore a subset of \\(S\\). Therefore, there exists a ball at \\(x\\) with some positive radius that is a subset of \\(S\\), so \\(x\\) is an interior point of \\(S\\).
+Consider the values \\R: \{r_1, r_2, ..., r_n\}\\). Let \\(r_k \in R\\) be such that \\(r_i \ge r_k\\) for any \\(r_i \in R\\). Therefore, \\(B(x, r_k)\\) is a subset of every \\(S_i\\), and is therefore a subset of \\(S\\). Therefore, there exists a ball at \\(x\\) with some positive radius that is a subset of \\(S\\), so \\(x\\) is an interior point of \\(S\\).<span style="float: right;">☺</span>
 
 The proof that the union of a finite number of open sets is open is even simpler. Consider \\(S = \cup_{i = 1}^n S_i\\), similar to before. We just need to show that every point \\(x \in S\\) is an interior point of \\(S\\).
 
-Let \\(x \in S\\) be given. By the construction of \\(S\\), we know that there is at least one set \\(S_i\\) such that \\(x \in S_i\\). As \\(S_i\\) is open, there exists some positive \\(r\\) such that \\(B(x, r)\\) is a subset of \\(S_i\\). But since \\(B(x, r)\\) is a subset of \\(S_i\\), we know that \\(B(x, r)\\) is a subset of \\(S\\). Therefore, there exists a ball at \\(x\\), namely, \\(B\\), with some positive radius that is a subset of \\(S\\), so \\(x\\) is an interior point of \\(S\\).
+Let \\(x \in S\\) be given. By the construction of \\(S\\), we know that there is at least one set \\(S_i\\) such that \\(x \in S_i\\). As \\(S_i\\) is open, there exists some positive \\(r\\) such that \\(B(x, r)\\) is a subset of \\(S_i\\). But since \\(B(x, r)\\) is a subset of \\(S_i\\), we know that \\(B(x, r)\\) is a subset of \\(S\\). Therefore, there exists a ball at \\(x\\), namely, \\(B\\), with some positive radius that is a subset of \\(S\\), so \\(x\\) is an interior point of \\(S\\).<span style="float: right;">☺</span>
 
 > Note that, by knowing that the intersection of a finite number of open sets is itself open, you can show that the union of a finite number of closed sets is itself closed. What do we know about the **complement** of the union of a finite number of closed sets? Using a similar method, can you show that the intersection of a finite number of closed sets is itself closed?
 
 ## How About Infinite Sets?
 
-`TODO`
+As it turns out, two of the statements we proved in the above section become false if we allow ourselves to consider an infinite amount of sets. Namely, the intersection of an infinite number of open sets is not necessarily open, and the union of an infinite number of closed sets is not necessarily closed. The latter is a homework problem (😉) so we won't provide a counterexample for that one, but we will show by example the existence of a set of infinite open sets whose intersection is not open.
+
+Consider the infinite series of sets \\\{S_1, S_2, ...\}\\) where \\(S_i = B\left(0, \frac{1}{i}\right)\\). Let \\(S = \cap_{i = 1}^{\infty} S_i\\). Let us show that \\(S\\) is not open.
+
+> Sidenote: Remember that closed is not the exact opposite of open, so it isn't enough to show that \\(S\\) is closed!
+
+To show that \\(S\\) is not open, we just need to find a point in \\(S\\) that is not an interior point. All points in any set are either an interior point or a boundary point, so it suffices to show the existence of a point \\(x \in S\\) that is a boundary point, that is, a ball of any radius at \\(x\\) will intersect both \\(S\\) and \\(S^c\\).
+
+Proposition. \\(0 \in S\\) is not an interior point of \\(S\\).
+
+To show that \\(0\\) is in \\(S\\), we just need to show that \\(\forall i \in \N \quad 0 \in S_i\\). This is true as \\(S_i = B\left(0, \frac{1}{i}\right)\\), the center is always in the ball as the ball has a positive radius.
+
+To show that \\(0\\) is not an interior point of \\(S\\), we can prove that for any \\(r\\) there exists some point \\(x \in B(0, r)\\) that is not in \\(S\\). Consider a ball of radius \\(r > 0\\) around \\(0\\). Let \\(N = \lceil \frac{1}{r} \rceil + 1\\), thus, as \\(r\\) is positive, \\(N > \frac{1}{r} \implies 0 < \frac{1}{N} < r\\). 
+
+Now, consider a point \\(x\\) such that \\(||x|| = \frac{\frac{1}{N} + r}{2}\\). As \\(||x||\\) is the average of \\(\frac{1}{N}\\) and \\(r\\), we know that \\(||x||\\) is strictly between the two numbers. Thus, \\(x \not\in S_N = B\left(0, \frac{1}{N}\right)\\), but \\(x \in B(0, r)\\). But if \\(x \not\in S_N\\), then \\(x \not\in S\\). Therefore, the intersection of any ball around \\(0\\) and the complement of \\(S\\) is not empty, demonstrating that \\(0\\) is not an interior point and therefore \\(S\\) is not open.<span style="float: right;">☺</span>
 
 ## References
  * Section on 10/7/21
