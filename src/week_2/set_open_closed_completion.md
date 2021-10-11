@@ -83,7 +83,7 @@ Let us first show that the intersection of a finite number of open sets is open.
 
 Let \\(x \in S\\) be given. We must have \\(x \in S_i\\) for all \\(S_i\\). As \\(S_i\\) is open, there exists some \\(r_i > 0\\) such that for any \\(0 < r \le r_i\\), we know that \\(B(x, r)\\) is a subset of \\(S_i\\). 
 
-Consider the values \\R: \{r_1, r_2, ..., r_n\}\\). Let \\(r_k \in R\\) be such that \\(r_i \ge r_k\\) for any \\(r_i \in R\\). Therefore, \\(B(x, r_k)\\) is a subset of every \\(S_i\\), and is therefore a subset of \\(S\\). Therefore, there exists a ball at \\(x\\) with some positive radius that is a subset of \\(S\\), so \\(x\\) is an interior point of \\(S\\).<span style="float: right;">☺</span>
+Consider the values \\(R: \\{r_1, r_2, ..., r_n\\}\\). Let \\(r_k \in R\\) be such that \\(r_i \ge r_k\\) for any \\(r_i \in R\\). Therefore, \\(B(x, r_k)\\) is a subset of every \\(S_i\\), and is therefore a subset of \\(S\\). Therefore, there exists a ball at \\(x\\) with some positive radius that is a subset of \\(S\\), so \\(x\\) is an interior point of \\(S\\).<span style="float: right;">☺</span>
 
 The proof that the union of a finite number of open sets is open is even simpler. Consider \\(S = \cup_{i = 1}^n S_i\\), similar to before. We just need to show that every point \\(x \in S\\) is an interior point of \\(S\\).
 
@@ -95,7 +95,7 @@ Let \\(x \in S\\) be given. By the construction of \\(S\\), we know that there i
 
 As it turns out, two of the statements we proved in the above section become false if we allow ourselves to consider an infinite amount of sets. Namely, the intersection of an infinite number of open sets is not necessarily open, and the union of an infinite number of closed sets is not necessarily closed. The latter is a homework problem (😉) so we won't provide a counterexample for that one, but we will show by example the existence of a set of infinite open sets whose intersection is not open.
 
-Consider the infinite series of sets \\\{S_1, S_2, ...\}\\) where \\(S_i = B\left(0, \frac{1}{i}\right)\\). Let \\(S = \cap_{i = 1}^{\infty} S_i\\). Let us show that \\(S\\) is not open.
+Consider the infinite series of sets \\(\\{S_1, S_2, ...\\}\\) where \\(S_i = B\left(0, \frac{1}{i}\right)\\). Let \\(S = \cap_{i = 1}^{\infty} S_i\\). Let us show that \\(S\\) is not open.
 
 > Sidenote: Remember that closed is not the exact opposite of open, so it isn't enough to show that \\(S\\) is closed!
 
