@@ -37,8 +37,18 @@ Intuitively, by forcing \\(x\\) to be in a sufficiently small neighborhood of \\
 >
 > For \\(x\\) arbitrarily close to zero, we have \\(f(x) \approx 0\\); however, for \\(x = 0\\), we have \\(f(x) = 1234\\). As such, there is no \\(L\\) that satisfies \\(|f(x) - L| < 0.1\\) for all \\(x\\) arbitrarily close to zero (including zero), and so \\(\lim_{x \to 0} f(x)\\) does not exist.
 >
-> The **only reason** this limit doesn't exist is because we can substitute \\(x = 0\\) into \\(f(x)\\) when computing the limit. If we use our original definition, we can't do that, and so, we would then have \\(lim_{x\to 0} f(x) = 0\\).
+> The **only reason** this limit doesn't exist is because we can substitute \\(x = 0\\) into \\(f(x)\\) when computing the limit. If we use our original definition, we can't do that, and so, we would then have \\(\lim_{x\to 0} f(x) = 0\\).
 >
 > While our definition (the first definition presented here) and the other definition have this difference, we rarely take limits at single-point discontinuities. As such, we can derive the same (or at least very similar) theorems with either.
 >
+
+## Defining Continuity
+
+A function, \\(f(t)\\), is continuous on some domain, \\(D\\), if and only if it satisfies all of the following:
+\\[
+\begin{aligned}
+   \text{1.} && \forall x \in D, \lim_{t \to x} f(t) \text{ exists} \\\\
+   \text{2.} && \forall x \in D, f(x) = \lim_{t \to x} f(t)
+\end{aligned}
+\\]
 
