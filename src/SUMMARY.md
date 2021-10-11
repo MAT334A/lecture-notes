@@ -15,9 +15,13 @@
 # Week 2
 - [Inner Products and Projection](./week_2/projections.md)
 - [Set Definitions](./week_2/set_definitions.md)
-- [Set Theorems and Limits](./week_2/set_thms_limits.md)
+- [Set Theorems](./week_2/set_thms.md)
     - [Connecting Boolean and Set Operators](./week_2/boolean_and_set_operators.md)
     - [Open, Closed, and Completion](./week_2/set_open_closed_completion.md)
+- [Limit Definitions](./week_2/limit_defs.md)
+
+# Week 3
+- [Limit Proofs](./week_3/proofs_with_limits.md)
 
 ----
 
