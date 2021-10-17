@@ -23,6 +23,7 @@
 # Week 3
 - [Limit Proofs](./week_3/proofs_with_limits.md)
 - [Sequences](./week_3/sequences_intro.md)
+- [The Completeness Axiom](./week_3/completeness_ax.md)
 
 ----
 
