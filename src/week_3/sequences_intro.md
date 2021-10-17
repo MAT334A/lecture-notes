@@ -105,8 +105,12 @@ Trust me, It's true.
 
 ### Continuity!
 
-`TODO`
+We can relate sequences in \\(\R^n\\) to continuity with the following theorem:
 
-## The Notion of Completeness
+Given \\(S \subseteq \R^n\\) and a function \\(f: S \rightarrow \R^m\\), \\(f\\) is continuous at a point \\(a \in S\\) if and only if for any sequence \\(\{x_k\}_{k = 1}^{\infty} \in S\\) that converges to \\(a\\), the sequence \\(\{f(x_k)\}_{k = 1}^{\infty} \in \R^m\\) converges to \\(f(a)\\).
 
-`TODO`
+The fowards direction is fairly straightforward. Given \\(f\\) is continuous at \\(a\\), consider some fixed positive \\(\epsilon\\). There is some positive \\(\delta\\) such that for any \\(y \in S\\), \\(||y - a|| < \delta \implies ||f(y) - f(a)|| < \epsilon\\). If \\(\{x_k\}\\) converges, then whatever \\(\delta\\) is, there exists some \\(K \in \N\\) that guarantees \\(||x_k - a|| < \delta\\) if \\(k \ge K\\), guaranteeing \\(||f(x_k) - f(a)|| < \epsilon\\).
+
+The backwards direction is more sophisticated, and uses proof by contradiction. Suppose that for any converging sequence \\(\{x_k\}_{k = 1}^{\infty} \in S\\) to \\(a\\), the sequence \\(\{f(x_k)\}_{k = 1}^{\infty} \in \R^m\\) converges to \\(f(a)\\). For contradiction, suppose that \\(f\\) is not continuous at \\(a\\). Therefore, there exists some \\(\epsilon > 0\\) such that for any choice of \\(\delta\\), there is some \\(y \in S\\) such that both \\(||y - a|| < \delta\\) and \\(||f(y) - f(a)|| > \epsilon\\). 
+
+Let \\(x_k\\) be the vector guaranteed to exists that satisfies \\(||x_k - a|| < \delta\\) and \\(||f(x_k) - f(a)|| > \epsilon\\) for \\(\delta = \frac{1}{k}\\). As when \\(k\\) gets arbitrarily big, \\(\delta\\) becomes arbitrarily close to \\(0\\), we have a sequence that converges to \\(a\\), but violates the condition that \\(\{f(x_k)\}_{k = 1}^{\infty} \in \R^m\\) converges to \\(f(a)\\). Contradiction, therefore, we must have \\(f\\) continuous at \\(a\\).
