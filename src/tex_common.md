@@ -3,6 +3,10 @@
 
 \\[
 % \lv is short for "vector left"
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\\\{}
+\def\rbrk{\\\}}
 \def\lv{\left\<}
 \def\rv{\right\>}
 \def\iprod#1{\lv #1 \rv}

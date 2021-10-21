@@ -25,6 +25,9 @@
 - [Sequences](./week_3/sequences_intro.md)
 - [The Completeness Axiom](./week_3/completeness_ax.md)
 
+# Week 4
+- [Section](./week_4/section.md)
+
 ----
 
 # Contributing to this project
