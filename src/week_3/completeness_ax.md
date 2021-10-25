@@ -24,6 +24,10 @@ Given some positive real number \\(a\\), we would like to compute \\(\sqrt{a}\\)
 
 Start with a (positive) guess, which we will call \\(x_0\\). Realistically, we would probably choose one of the integers whose square bounds \\(a\\), but in principle we can choose whatever we want.
 
-Observe that \\(\sqrt{a}\cdot\sqrt{a} = x_0\cdot\frac{a}{x_0} = a\\), and therefore exactly one of \\(x_0\\) and \\(\frac{a}{x_0}\\) is greater than \\(\sqrt{a}\\) and exactly one is less. Perhaps a good next guess is the average of \\(x_0\\) and \\(\frac{a}{x_0}\\)! Let this quantity be \\(x_1\\), and in general, \\(x_{n + 1} = \frac{1}{2}\left(x_n + \frac{a}{x_n}\right)\\).
+Observe that \\(\sqrt{a}\cdot\sqrt{a} = x_0\cdot\frac{a}{x_0} = a\\), and therefore exactly one of \\(x_0\\) and \\(\frac{a}{x_0}\\) is greater than \\(\sqrt{a}\\) and exactly one is less. Perhaps a good next guess is the average of \\(x_0\\) and \\(\frac{a}{x_0}\\)! Let this quantity be \\(x_1\\), and in general, \\(x_{n + 1} = \frac{1}{2}\left(x_n + \frac{a}{x_n}\right)\\). This sequence converges to \\(\sqrt{a}\\)!
 
-`TODO` Justification
+To demonstrate that this method works, first note that \\(x_1 \ge \sqrt{a}\\). To demonstrate this, let \\(f(x) = \frac{1}{2}\left(x + \frac{a}{x}\right)\\). We have \\(f'(x) = \frac{1}{2} - \frac{a}{2x^2}\\), so the minimum of \\(f(x)\\) occurs at \\(x = \sqrt{a}\\), where \\(f(\sqrt{a}) = \sqrt{a}\\). Therefore, after a single iteration, we are guaranteed \\(x_1 \ge \sqrt{a}\\) regardless of the value of \\(x_0\\).
+
+Therefore, if \\(n \ge 1\\), we have \\(x_n \ge \sqrt{a}\\). Note that \\(x_{n + 1} \le x_n\\) as \\(x_n \ge \sqrt{a} \implies a \le x_n^2 \implies \frac{a}{x_n} \le x_n \implies \frac{a}{2x_n} \le \frac{x_n}{2} \implies \frac{x_n}{2} + \frac{a}{2x_n} = x_{n + 1} \le x_n\\). Therefore, the sequence \\((x_n)_{n = 1}^\infty\\) is monotonically decreasing and has a lower bound, so there exists some infimum. 
+
+It remains to show that this infimum is indeed \\(\sqrt{a}\\). Suppose the infimum is actually some \\(\alpha > \sqrt{a}\\). Let \\(\alpha = \sqrt{a} + \epsilon\\) for some positive real \\(\epsilon\\). Therefore, as \\(\alpha\\) is the infimum, there exists some iteration \\(x_n\\) such that \\(\alpha \le x_n < \alpha + \epsilon\\). Therefore, \\(x_{n + 1} = \frac{x_n}{2} + \frac{a}{2x_n} < \frac{\sqrt{a} + 2\epsilon}{2} + \frac{a}{2\sqrt{a}}) = \sqrt{a} + \epsilon = \alpha\\), which contradicts \\(\alpha\\) as the minimum. Therefore, this sequence produced by Heron's Method converges to \\(\sqrt{a}\\).
