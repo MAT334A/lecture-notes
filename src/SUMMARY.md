@@ -26,6 +26,8 @@
 - [The Completeness Axiom](./week_3/completeness_ax.md)
 
 # Week 4
+- [Bolzano-Weierstrass](./week_4/bolzano_weierstrass.md)
+- [Cauchy Sequences and Compactness](./week_4/cauchy_compactness.md)
 - [Section](./week_4/section.md)
 
 ----
