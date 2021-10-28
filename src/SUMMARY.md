@@ -29,6 +29,7 @@
 - [Bolzano-Weierstrass](./week_4/bolzano_weierstrass.md)
 - [Cauchy Sequences and Compactness](./week_4/cauchy_compactness.md)
 - [Section](./week_4/section.md)
+- [Connectedness](./week_4/connectedness.md)
 
 ----
 
