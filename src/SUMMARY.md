@@ -31,6 +31,9 @@
 - [Section](./week_4/section.md)
 - [Connectedness](./week_4/connectedness.md)
 
+# Week 5
+- [Uniform Continuity](./week_5/uniform_continuity.md)
+
 ----
 
 # Contributing to this project
