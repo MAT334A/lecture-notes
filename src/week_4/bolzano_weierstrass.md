@@ -6,7 +6,7 @@
 
 The **Bolzano-Weirstrass** Theorem (often abbreviated 'BW') states that every bounded sequence in \\(\R\\) has a *convergent subsequence*.
 
-> A **subsequence** \\(x_{n_k})_{k = 1}^\infty\\) of some sequence \\((x_n)_{n = 1}^{\infty}\\) is composed of some terms of \\(x_n\\) such that if \\(i < j\\), \\(n_i < n_j\\). Informally, a subsequence takes some terms of a sequence, but keeps the terms in the relative order they appeared in the sequence.
+> A **subsequence** \\(\left(x_{n_k}\right)\_{k = 1}^\infty\\) of some sequence \\((x_n)\_{n = 1}^{\infty}\\) is composed of some terms of \\(x_n\\) such that if \\(i < j\\), \\(n_i < n_j\\). Informally, a subsequence takes some terms of a sequence, but keeps the terms in the relative order they appeared in the sequence.
 
 To prove BW, suppose that the sequence \\((x_n)_{n = 1}^\infty\\) is bounded above by \\(c_2\\) and below by \\(c_1\\). Let us map the sequence to the interval \\([0, 1]\\).
 
