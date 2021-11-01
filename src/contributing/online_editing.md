@@ -17,7 +17,7 @@ Note, however, that it can take several minutes for the rendered book to update.
 
 ![](./clicking_commit.png)
 
- * If you would like to make your changes publicly available without applying them to the published copy of the book, select "create a pull request" prior to committing.
+ * If you would like to make your changes publicly available without applying them to the published copy of the notes, select "create a pull request" prior to committing.
 
 ![](./clicking_create_pr.png)
 

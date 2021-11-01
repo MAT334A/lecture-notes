@@ -20,7 +20,7 @@ Here's a simple one. If \\(S \subseteq \R\\) is not an interval, then it is not 
 
 Here's another: Continuous functions map connected sets to connected sets. In other words, \\(\left(\left(f : S \to D\right) \wedge \textsf{Continuous}(f)\right) \implies \left(\textsf{Connected}(S) \to \textsf{Connected}\left(\textsf{Image}_S(f)\right)\right)\\).
 
-**Proof:** Suppose \\(D\\) is disconnected `TODO`
+**Proof:** Suppose \\(D\\) is disconnected: `TODO`
 
 # The Notion of Pathwise Connectedness
 
