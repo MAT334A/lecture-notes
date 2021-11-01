@@ -8,11 +8,19 @@ We say a set \\(S \in \R^n\\) is ***dis*connected** if there exists a partition 
 
 Note: by this definition, if \\(S\\) is the union of the (open) unit balls centered at \\((0, 0)\\) and \\((1, 0)\\), then \\(S\\) is disconnected. 
 
-## Connectedness Theorems
+# Connectedness Theorems
 
 Here's a simple one. If \\(S \subseteq \R\\) is not an interval, then it is not connected.
 
-Given \\(S\\) is not an interval, there exist some \\(a, b, c \in \R\\) such that \\(a, c \in S\\) and \\(b \not\in S\\). Therefore, consider \\(S_1 = (-\infty, b) \cap S\\) and \\(S_2 = (b, \infty) \cap S\\). Note that \\(S_1 \cup S_2 = (\R \setminus \{b\}) \cap S = S\\), and \\(\bar{S_1} \subseteq (-\infty, b]\\), \\(\bar{S_2} \subseteq [b, \infty)\\).
+**Proof:** Given \\(S\\) is not an interval, there exist some \\(a, b, c \in \R\\) such that \\(a, c \in S\\) and \\(b \not\in S\\) where \\(a < b < c\\). Therefore, consider \\(S_1 = (-\infty, b) \cap S\\) and \\(S_2 = (b, \infty) \cap S\\). Note that \\(S_1 \cup S_2 = (\R \setminus \\\{b\\\}) \cap S = S\\), and \\(\overline{S}_1 \subseteq (-\infty, b]\\), \\(\overline{S}_2 \subseteq [b, \infty)\\).
+
+\\(b \not\in S_1\\) and \\(b \not\in S_2\\). Therefore, we have found two sets that partition \\(S\\). Therefore, \\(S\\) is disconnected. <span style="float: right;">😃</span>
+
+<hr/>
+
+Here's another: Continuous functions map connected sets to connected sets. In other words, \\(\left(\left(f : S \to D\right) \wedge \textsf{Continuous}(f)\right) \implies \left(\textsf{Connected}(S) \to \textsf{Connected}\left(\textsf{Image}_S(f)\right)\right)\\).
+
+**Proof:** Suppose \\(D\\) is disconnected `TODO`
 
 # The Notion of Pathwise Connectedness
 
