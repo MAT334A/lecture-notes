@@ -1,0 +1,1502 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Math 334 Lecture Notes</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./src/style.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="about.html">About</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Week 1</li><li class="chapter-item expanded "><a href="week_1/boolean_logic.html"><strong aria-hidden="true">1.</strong> Boolean Logic</a></li><li class="chapter-item expanded "><a href="week_1/cs_inequality_summary.html"><strong aria-hidden="true">2.</strong> Introducing the Cauchy-Schwarz Inequality</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="week_1/cs_inequality_derivation.html"><strong aria-hidden="true">2.1.</strong> Deriving it</a></li><li class="chapter-item expanded "><a href="week_1/cs_inequality_examples.html"><strong aria-hidden="true">2.2.</strong> Using it</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Week 2</li><li class="chapter-item expanded "><a href="week_2/projections.html"><strong aria-hidden="true">3.</strong> Inner Products and Projection</a></li><li class="chapter-item expanded "><a href="week_2/set_definitions.html"><strong aria-hidden="true">4.</strong> Set Definitions</a></li><li class="chapter-item expanded "><a href="week_2/set_thms.html"><strong aria-hidden="true">5.</strong> Set Theorems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="week_2/boolean_and_set_operators.html"><strong aria-hidden="true">5.1.</strong> Connecting Boolean and Set Operators</a></li><li class="chapter-item expanded "><a href="week_2/set_open_closed_completion.html"><strong aria-hidden="true">5.2.</strong> Open, Closed, and Completion</a></li></ol></li><li class="chapter-item expanded "><a href="week_2/limit_defs.html"><strong aria-hidden="true">6.</strong> Limit Definitions</a></li><li class="chapter-item expanded affix "><li class="part-title">Week 3</li><li class="chapter-item expanded "><a href="week_3/proofs_with_limits.html"><strong aria-hidden="true">7.</strong> Limit Proofs</a></li><li class="chapter-item expanded "><a href="week_3/sequences_intro.html"><strong aria-hidden="true">8.</strong> Sequences</a></li><li class="chapter-item expanded "><a href="week_3/completeness_ax.html"><strong aria-hidden="true">9.</strong> The Completeness Axiom</a></li><li class="chapter-item expanded affix "><li class="part-title">Week 4</li><li class="chapter-item expanded "><a href="week_4/bolzano_weierstrass.html"><strong aria-hidden="true">10.</strong> Bolzano-Weierstrass</a></li><li class="chapter-item expanded "><a href="week_4/cauchy_compactness.html"><strong aria-hidden="true">11.</strong> Cauchy Sequences and Compactness</a></li><li class="chapter-item expanded "><a href="week_4/section.html"><strong aria-hidden="true">12.</strong> Section</a></li><li class="chapter-item expanded "><a href="week_4/connectedness.html"><strong aria-hidden="true">13.</strong> Connectedness</a></li><li class="chapter-item expanded affix "><li class="part-title">Week 5</li><li class="chapter-item expanded "><a href="week_5/uniform_continuity.html"><strong aria-hidden="true">14.</strong> Uniform Continuity</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Contributing to this project</li><li class="chapter-item expanded "><a href="contributing/online_editing.html"><strong aria-hidden="true">15.</strong> Working on GitHub</a></li><li class="chapter-item expanded "><a href="contributing/working_locally.html"><strong aria-hidden="true">16.</strong> Working Locally</a></li><li class="chapter-item expanded "><a href="contributing/mdbook_markdown.html"><strong aria-hidden="true">17.</strong> Working With mdbook's Markdown</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Math 334 Lecture Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/MAT334A/lecture-notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="about"><a class="header" href="#about">About</a></h1>
+<p>These are the lecture notes for MATH 33X 2021-2022, taught by Professor Stefan Steinerberger. They use both the lecture and textbook as a reference. If there is something wrong with the notes, please contact Henry H or Nelson S in the MATH 33X Discord. 😀</p>
+<p>If you would like to contribute to these notes, contact Henry H with your GitHub username to be able to clone and push to this repository.</p>
+<p>These lecture notes use <code>mdbook</code>. <a href="https://rust-lang.github.io/mdBook/index.html">Its documentation can be found here</a>.</p>
+<p>When new commits are added to the GitHub repository for this work, the <a href="https://mat334a.github.io/lecture-notes/">version of this document on GitHub pages</a>.
+should automatically update.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="boolean-logic"><a class="header" href="#boolean-logic">Boolean Logic</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<!--
+We use \\(math here\\) for inline math and \\[math here\\] for display/block math.
+See https://rust-lang.github.io/mdBook/format/mathjax.html for details.
+-->
+<h2 id="boolean-logic-1"><a class="header" href="#boolean-logic-1">Boolean Logic</a></h2>
+<p>We’ll be using \(\T\), \(\F\), and the operators \(\wedge, \vee\), and \(\neg\).</p>
+<h3 id="summary-of-notation"><a class="header" href="#summary-of-notation">Summary of Notation</a></h3>
+<table>
+<tr><th>
+<p>\(\T, \F\)</p>
+</th><td>
+<p><code>true</code>, <code>false</code></p>
+</td></tr>
+<tr><th>
+<p>\(\wedge\)</p>
+</th><td>
+<p><code>and</code></p>
+</td></tr>
+<tr><th>
+<p>\(\vee\)</p>
+</th><td>
+<p><code>or</code></p>
+</td></tr>
+<tr><th>
+<p>\(\neg\)</p>
+</th><td>
+<p><code>not</code></p>
+</td></tr>
+<tr><th>
+<p>\(\iff\)</p>
+</th><td>
+<p>Bi-implication/”if and only if”</p>
+</td></tr>
+</table>
+<p>\(\vee\) and \(\wedge\) are both associative and commutative. Generally, we let \(\wedge\) have higher precedence than \(\vee\) and \(\neg\) have higher precedence than \(\wedge\). In this way,
+\[
+a \vee b \wedge \neg c \vee d = a \vee (b \wedge (\neg c)) \vee d
+\]</p>
+<h3 id="propositions"><a class="header" href="#propositions">Propositions</a></h3>
+<p>Also called sentences, propositions are statements that are either <code>true</code> or <code>false</code>. We’ll be representing them with capital letters. For example, <code>A</code>.</p>
+<h2 id="demorgans-laws"><a class="header" href="#demorgans-laws">DeMorgan’s Laws</a></h2>
+<p>\[
+\neg \left( A \vee B \right) = \neg A \wedge \neg B
+\]
+and
+\[
+\neg \left( A \wedge B \right) = \neg A \vee \neg B
+\]</p>
+<h2 id="precedence"><a class="header" href="#precedence">Precedence</a></h2>
+<p>Conventionally, \(\wedge\) has higher precedence than \(\vee\) and \(\neg\) has higher precedence than \(\wedge\). This means that \(A \vee \neg B \wedge C = A \vee ((\neg B) \wedge C)\), because operators with higher precedence are <strong>evaluated/applied first</strong>.</p>
+<h2 id="applying-demorgans-laws-to-exists-and-forall"><a class="header" href="#applying-demorgans-laws-to-exists-and-forall">Applying DeMorgan’s Laws to \(\exists\) and \(\forall\)</a></h2>
+<p>First, it’s useful to define \(\exists x. P(x) := \vee_{x \in D} P(x) \) and \(\forall x. P(x) := \wedge_{x \in D} P(x)\), where \(D\) is some domain we’re interested in.</p>
+<p>Using these definitions, we get:</p>
+<p>\[
+\begin{aligned}
+\neg \left(\exists x. x \neq 0\right) \iff \forall x. \left(x = 0\right) \\
+\neg \left(\forall x. x \neq 0\right) \iff \exists x. \left(x = 0\right)
+\end{aligned}
+\]</p>
+<p><code>TODO</code></p>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<ul>
+<li>Lecture notes published for quiz section</li>
+<li>Lecture</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-cauchy-schwarz-inequality"><a class="header" href="#the-cauchy-schwarz-inequality">The Cauchy-Schwarz Inequality</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<p>\[
+\left|\left&lt;x, y\right&gt;\right| \leq ||x|| \cdot ||y||
+\]</p>
+<p>Some say it is the most important theorem in mathematics.</p>
+<h2 id="oh-and-about-iprodx-y-"><a class="header" href="#oh-and-about-iprodx-y-">Oh, and about \(\iprod{x, y}\) ...</a></h2>
+<p>Throughout these notes, we will use the notation \(\iprod{x, y}\) to refer to the <strong>inner product</strong> or <strong>dot product</strong> (or even sometimes the <strong>scalar product</strong>) of two vectors \(x, y \in\R^n\). In other contexts, the notation \(x \cdot y\) is common, but the former is the notation that will be used. <del>And if you’re used to the other way, too bad for you.</del></p>
+<p>The inner product \(\iprod{x, y}\) with components \(x_i\) and \(y_i\) for \(1 \le i \le n\) is given by</p>
+<p>\[
+\sum_{i = 1}^n x_iy_i<br />
+\]</p>
+<p>The <strong>norm</strong> or <strong>magnitude</strong> of a vector \(x\), which can traditionally be understood as its length, is written as \(\norm{x}\), and can be defined as:</p>
+<p>\[
+\norm{x} = \sqrt{\iprod{x, x}}
+\]</p>
+<p>Note that as \(\iprod{x, x} = \sum_{i = 1}^n x_i^2\), the square root is valid, and therefore \(\norm{x}\) is always non-negative.</p>
+<h3 id="simple-inner-product-identities-other-than-cauchy-schwarz"><a class="header" href="#simple-inner-product-identities-other-than-cauchy-schwarz">Simple Inner Product Identities (other than Cauchy-Schwarz)</a></h3>
+<p>These can be proved by a simple application of the definition of the inner product! In these identities, \(x, y \in\R^n\) and \(n\) is a real number. You might receive a consolation prize if you struggle with proving the first one.</p>
+<ul>
+<li>\(\iprod{x, y} = \iprod{y, x}\)</li>
+<li>\(\iprod{x + y, z} = \iprod{x, z} + \iprod{y, z}\)</li>
+<li>\(\iprod{nx, y} = n\iprod{x, y}\)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-cauchy-schwarz-inequality-derivation"><a class="header" href="#the-cauchy-schwarz-inequality-derivation">The Cauchy-Schwarz Inequality Derivation</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<h2 id="getting-the-quadratic"><a class="header" href="#getting-the-quadratic">Getting the quadratic</a></h2>
+<p>Let \(x, y \in \mathbb{R}^n\) and \(t \in \mathbb{R}\). This proof uses the fact that \(\iprod{x, x} = ||x||^2 \geq 0\), as well as that \(\iprod{x, y} = \iprod{y, x}\) and that \(\iprod{x + y, z} = \iprod{x, z} + \iprod{y, z}\).
+\[
+\begin{aligned}
+0 &amp;\leq \iprod{x - ty, x - ty} \\
+&amp;= \iprod{x, x - ty} + \iprod{ -ty, x - ty } \\
+&amp;= \iprod{ x - ty, x } - t\iprod{ y, x - ty } \\
+&amp;= \iprod{ x - ty, x } - t\iprod{ x - ty, y} \\
+&amp;= \iprod{x, x} - t\iprod{ y, x } - t\iprod{ x - ty, y }\\
+&amp;= \iprod{x, x} - t\iprod{ x, y } - t\iprod{ x, y } - t\iprod{-ty, y}\\
+&amp;= \iprod{x, x} - t\iprod{ x, y } - t\iprod{x, y} + t^2\iprod{y, y}\\
+&amp;= \iprod{x, x} - 2t\iprod{ x, y } + t^2\iprod{y, y}\\
+&amp;= t^2\iprod{y, y} - 2t\iprod{ x, y } + \iprod{x, x}
+\end{aligned}
+\]</p>
+<p>Let \(f(t) = t^2\iprod{y, y} - 2t\iprod{x, y} + \iprod{x, x}\). Notice that \(f\) is a quadratic function of \(t\)!</p>
+<h2 id="graphing-it"><a class="header" href="#graphing-it">Graphing it</a></h2>
+<details><summary>Graph of
+<p>\(f(t)\)</p>
+</summary>
+<iframe src="https://www.desmos.com/calculator/x6kvupelri?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</details>
+<p>Notice that when we graph \(f(t)\), we get a quadratic that is always above the x-axis: It <strong>must</strong> have a minimum and that minimum <strong>must</strong> be where its first derivative is zero.</p>
+<p>Notice that \(t\) is the only <em>variable</em> we’re changing here, so taking its derivative is easy! Let’s find its minimum!
+\[
+\begin{aligned}
+f’(t) &amp;= \frac{\partial}{\partial t} \left(t^2\iprod{y, y}\right) - \frac{\partial}{\partial t} \left( 2t\iprod{x, y}\right) + \frac{\partial}{\partial t} (x)\\
+&amp;= 2t\iprod{y, y} - 2\iprod{x, y} + 0\\
+\implies 0 &amp;= 2t_{\text{min}} \iprod{y, y} - 2\iprod{x, y}\\
+\iff 2\iprod{x, y} &amp;= 2t_{\text{min}} \iprod{y, y}\\
+\iff 2t_{\text{min}} \iprod{y, y} &amp;= 2\iprod{x, y}
+\end{aligned}
+\]</p>
+<p>Keeping in mind that we constrain \(x \neq 0 \neq y\),
+\[
+\begin{aligned}
+t_{\text{min}} &amp;= \frac{\iprod{x, y}}{\iprod{y, y}}
+\end{aligned}
+\]</p>
+<h2 id="using-the-minimum"><a class="header" href="#using-the-minimum">Using the minimum</a></h2>
+<p>That \(f\left(t_{\text{min}}\right) \geq 0\) implies that all other \(f(t) \geq 0\), and so is a <strong>very strong statement</strong>. Let’s see what we get if we substitute \(t_{\text{min}}\) into our inequality!</p>
+<p>(<em>Again, note that we have \(\frac{\iprod{y, y}}{\iprod{y, y}} = 1\) because \(y\neq 0\), so \(\iprod{y, y} = ||y||^2 \neq 0\)</em>)</p>
+<p>\[
+\def\tmin{t_{\text{min}}}
+\begin{aligned}
+0 &amp;\leq \tmin^2\iprod{y, y} - 2\tmin\iprod{ x, y } + \iprod{x, x} \\
+&amp;= \left(\frac{\iprod{x, y}}{\iprod{y, y}}\right)^2 \iprod{y, y} - 2 \left(\frac{\iprod{x, y}}{\iprod{y, y}}\right)\iprod{x, y} + \iprod{x, x} \\
+&amp;= \frac{\left(\iprod{x, y}\right)^2 \iprod{y, y}}{\left(\iprod{y, y}\right)^2} - 2 \frac{\left(\iprod{x, y}\right)^2}{\iprod{y, y}} + \iprod{x, x} \\
+&amp;= \frac{\iprod{x, y}^2}{\iprod{y, y}} - 2 \frac{\iprod{x, y}^2}{\iprod{y, y}} + \iprod{x, x}\\
+\iff 0 &amp;\leq \frac{\iprod{x, y}^2}{\iprod{y, y}} - 2 \frac{\iprod{x, y}^2}{\iprod{y, y}} + \iprod{x, x}\\
+\iff 0 &amp;\leq -\frac{\iprod{x, y}^2}{\iprod{y, y}} + \iprod{x, x}\\
+\iff \frac{\iprod{x, y}^2}{\iprod{y, y}} &amp;\leq \iprod{x, x}\\
+\end{aligned}
+\]
+Note that \(0 \leq \iprod{x, y}^2\) because \(x, y \in \mathbb{R}^n\). As such,
+\[
+\begin{aligned}
+0 \leq \iprod{x, y}^2 &amp;\leq \iprod{x, x}\iprod{y, y}\\
+\implies 0 \leq \sqrt{\iprod{x, y}^2} &amp;\leq \sqrt{\iprod{x, x}\iprod{y, y}}\\
+\implies 0 \leq \left|\iprod{x, y}\right| &amp;\leq \sqrt{\iprod{x, x}}\sqrt{\iprod{y, y}}\\
+\implies 0 \leq \left|\iprod{x, y}\right| &amp;\leq \sqrt{||x||^2}\sqrt{||y||^2}\\
+\implies 0 \leq \left|\iprod{x, y}\right| &amp;\leq ||x|| ||y||
+\end{aligned}
+\]</p>
+<p>We now have the Cauchy-Schwarz Inequality! <span style="float: right;">🙂</span></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="using-the-cauchy-schwarz-inequality"><a class="header" href="#using-the-cauchy-schwarz-inequality">Using the Cauchy-Schwarz Inequality</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<p>The Cauchy-Schwarz inequality can be used to show, among other things, that the correlation between two vectors is at most 1, and the triangle inequality (that the two shorter sides of a triangle \(||a||\) and \(||b||\) have a larger combined length than the longest side of the triangle).</p>
+<h2 id="proving-the-triangle-inequality"><a class="header" href="#proving-the-triangle-inequality">Proving the Triangle Inequality</a></h2>
+<p>Let’s say that \(x, y \in \R^n\). We can then construct the triangle with sides \(x, y\) and \(x + y\).</p>
+<p>Recall that \(\norm{x + y}^2 = \iprod{x, y}\).</p>
+<p>We want to show that the longest side is shorter than the two shorter sides’ lengths added together.
+In other words, we want to show \(\norm{x + y} \leq \norm{x} + \norm{y}\).</p>
+<p>Let’s start by squaring both sides.
+\[
+\norm{x + y}^2 \leq \left(\norm{x} + \norm{y}\right)^2
+\]</p>
+<p>Note that we don’t have to consider the negative case because we know \(\norm{x + y} \geq 0\), \(\norm{x} \geq 0\), and \(\norm{y} \geq 0\).</p>
+<p>Because we can reverse this operation and get \(\norm{x + y} \leq \norm{x} + \norm{y}\), if we can prove \(\norm{x + y}^2 \leq \left(\norm{x} + \norm{y}\right)^2\), then we have proven the triangle inequality:
+\[
+\begin{aligned}
+\norm{x + y}^2 &amp;\leq \left(\norm{x} + \norm{y}\right)^2\\
+\iff \iprod{x, y} &amp;\leq \left(\norm{x} + \norm{y} \right)^2 \\
+\iff \iprod{x, y} &amp;\leq \norm{x} \cdot \norm{x} + 2 \cdot \norm{x} \cdot \norm{y} + \norm{y} \cdot \norm{y}
+\end{aligned}
+\]</p>
+<p>From the Cauchy-Schwarz inequality, we know \(\iprod{x, y} \leq \norm{x}\norm{y}\). As such,
+\[
+\begin{aligned}
+\iprod{x, y} \leq \norm{x}\cdot \norm{y} &amp;\leq 2\cdot \norm{x}\cdot \norm{y}\\
+\implies \iprod{x, y} &amp;\leq 2\cdot \norm{x}\cdot \norm{y}\\
+\implies \iprod{x, y} &amp;\leq \norm{x} \cdot \norm{x} + 2 \cdot \norm{x} \cdot \norm{y} + \norm{y} \cdot \norm{y}\\
+&amp;= \left(\norm{x} + \norm{y}\right)^2 &amp;&amp; \texttt{...as was shown above}
+\end{aligned}
+\]</p>
+<p>As such, we have \(\iprod{x, y} \leq \left(\norm{x} + \norm{y}\right)^2\). From this, square-rooting both sides gives us the triangle inequality.<span style="float: right;">☺</span></p>
+<h2 id="correlation"><a class="header" href="#correlation">Correlation</a></h2>
+<p>If we have two vectors, \(x, y \in \R^n\), then we define the <a href="http://sepwww.stanford.edu/sep/prof/waves/rnd/paper_html/node22.html">correlation</a> to be:</p>
+<p>\[
+c = \frac{\iprod{x’, y’}}{\norm{x’}\norm{y’}}
+\]</p>
+<p>where \(x’ = (x_1 - \bar{x}, x_2 - \bar{x}, ..., x_n - \bar{x})\) and \(y’ = (y_1 - \bar{y}, y_2 - \bar{y}, ..., y_n - \bar{y})\), and \(\bar{x}\) and \(\bar{y}\) are the means of the values of \(x\) and \(y\) respectively. (Essentially, using \(x’\) and \(y’\) ensures that the mean of values of both vectors is zero.)</p>
+<p>We can bound correlation using the Cauchy-Schwarz Inequality:
+\[
+\begin{aligned}
+c &amp;= \frac{\iprod{x, y}}{\norm{x}\norm{y}}\\
+\implies c \cdot \norm{x}\cdot \norm{y} &amp;= \iprod{x, y} &amp;&amp; \texttt{... by Algebra}\\
+\implies \abs{c \cdot \norm{x}\cdot \norm{y}} &amp;= \abs{\iprod{x, y}} \\
+\implies \Big|c \cdot \norm{x}\cdot\norm{y}\Big| &amp;\leq \norm{x} \cdot \norm{y} &amp;&amp; \texttt{... by the Cauchy-Schwarz Inequality}\\
+\implies \norm{x}\cdot \norm{y}\cdot \abs{c} &amp;\leq \norm{x} \cdot \norm{y} &amp;&amp; \texttt{... because $\norm{x} \geq 0$ and $\norm{y}\geq 0$}\\
+\implies \abs{c} &amp;\leq \frac{\norm{x} \cdot \norm{y}}{\norm{x} \cdot \norm{y}}\\
+\implies \abs{c} &amp;\leq 1 &amp;&amp; \texttt{... assuming $x \neq 0$, $y \neq 0$}
+\end{aligned}
+\]</p>
+<p>As such, \(\abs{c} \leq 1\), and so, \(-1 \leq c \leq 1\).<span style="float: right;">☺</span></p>
+<h3 id="sidenote"><a class="header" href="#sidenote">Sidenote</a></h3>
+<p>For those familiar with the identity \(\iprod{x, y} = \cos\theta\norm{x}\norm{y}\), note that correlation is just the cosine of the angle between the vectors. If correlation is very close to \(1\), then \(\cos\theta\) is very close to \(1\) and hence \(\theta\) is close to \(0\), so the values of the two vectors increase and decrease together (the essence of correlation). Similarly, if correlation is close to \(0\), then \(\theta\) is roughly \(\frac{\pi}{2}\), and the values do whatever they want (the essence of no correlation).</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="inner-products-and-projection"><a class="header" href="#inner-products-and-projection">Inner Products and Projection</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<h2 id="cosine-and-the-inner-product"><a class="header" href="#cosine-and-the-inner-product"><code>Cosine</code> and the inner product</a></h2>
+<p>\[
+\iprod{x, y} = ||x||\cdot ||y|| \cos (\alpha)
+\]</p>
+<p>Where \(x, y \in \mathbb{R}^n\) and \(\alpha\) is the angle between the two vectors.</p>
+<details><summary>This comes from the law of cosines.</summary>
+<p><code>TODO</code>: First, derive the law of cosines, then re-arrange.</p>
+</details>
+<h2 id="projecting-one-vector-onto-another"><a class="header" href="#projecting-one-vector-onto-another">Projecting one vector onto another.</a></h2>
+<p>As above, let \(x, y \in \mathbb{R}^n\).</p>
+<center>
+<img alt="Projecting a vector, x, onto another vector, y." style="border-radius: 12px; min-width: 50%;" src="week_2/./projection_onto_y.svg"/>
+</center>
+<p>The projection of \(x\) onto \(y\) is denoted \(\proj{y}{x}\) and is a vector. Here, let’s call it \(p\).</p>
+<p>From the diagram above, we can see that \(||p|| = ||x|| \cdot \cos(\alpha)\). As such, \(p = ||x|| \cdot \cos(\alpha) \cdot \frac{y}{||y||}\).</p>
+<details>
+<summary>Why does dividing by a vector's length normalize it?</summary>
+<p>\(\frac{y}{||y||}\) is a vector of unit length in the direction of \(y\). It’s often denoted \(\hat{y}\) and is the “normalized” version of \(y\).</p>
+<p>We can see that \(\hat{y}\) has unit length by calculating it (...assuming \(\norm{y} &gt; 0\) so that \(y\) has direction):
+\[
+\begin{aligned}
+\norm{\hat{y}} &amp;= \sqrt{\norm{\hat{y}}^2} \\
+&amp;= \sqrt{\norm{\frac{y}{\norm{y}}}}\\
+&amp;= \sqrt{\frac{\norm{y}}{\norm{y}}} &amp;&amp; \texttt{...because $||y||$ is a scalar}\\
+&amp;= 1&amp;&amp;\square
+\end{aligned}
+\]</p>
+</details>
+<p>We therefore have,
+\[
+\begin{aligned}
+\proj{y}{x} &amp;= \frac{\norm{x} \cdot \norm{y} \cdot \cos(\alpha) \cdot y}{\norm{y}^2}\\
+&amp;= \frac{\iprod{x, y} \cdot y}{\norm{y}^2}\\
+&amp;= \frac{\iprod{x, y}}{\norm{y}} \cdot \frac{y}{\norm{y}}
+\end{aligned}
+\]</p>
+<p>Of course, \(\frac{y}{\norm{y}} = \hat{y}\), which has length 1. We therefore get a <em>very</em> simple expression for the length of the projected vector:
+\[
+\norm{\proj{y}{x}} = \frac{\iprod{x, y}}{\norm{y}}
+\]</p>
+<h2 id="interesting-special-case"><a class="header" href="#interesting-special-case">Interesting Special Case</a></h2>
+<p>Let \(y = (1, 1, 1, ..., 1) \in \mathbb{R}^n\). We then have,
+\[
+\begin{aligned}
+\abs{\iprod{x, y}} &amp;= \abs{\sum_{i = 1}^n x_i y_i} &amp;&amp; \texttt{... by the definition of the inner product.}\\
+&amp;= \abs{\sum_{i = 1}^n x_i} &amp;&amp; \texttt{... because each $y_i = 1$}\\
+&amp;\leq \norm{x} \norm{y} &amp;&amp; \texttt{... by the Cauchy-Schwarz Theorem}\\
+&amp;= \left(\sum_{i = 1}^{n} x_i^2\right)^{1/2} \left(\sqrt{n}\right)
+\end{aligned}
+\]</p>
+<p>We therefore have that,
+\[
+\abs{\sum_{i = 1}^n x_i} \leq \left(\sum_{i = 1}^{n} x_i^2\right)^{1/2} \left(\sqrt{n}\right)
+\]</p>
+<p>for <strong>any</strong> \(x \in \mathbb{R}^n\). <span style="float: right;">😃</span></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="some-set-related-definitions"><a class="header" href="#some-set-related-definitions">Some Set-Related Definitions</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<h2 id="a-ball"><a class="header" href="#a-ball">A <code>Ball</code></a></h2>
+<p>Define a ball, \(B(x, r) := \left\{ y\in\R^n : \norm{x - y} &lt; r \right\}\), where \(x \in \R^n\) and \(r \in \R\).</p>
+<p>A ball is a set of points. If we let \(n = 2\), then it is an <a href="https://en.wikipedia.org/wiki/Disk_%28mathematics%29">open disk</a>.</p>
+<p>Notice that we’re writing “\(\norm{x - y} &lt; r\)” with a <code>&lt;</code>, not a <code>≤</code>. This means that the points that are a distance \(r\) from \(x\), the center of the ball, <strong>are not in the ball \(B(x, r)\)</strong>.</p>
+<p><em>Note: It is common to use the alternate and equivalent notation</em> \(B_r(x)\) <em>for</em> \(B(x, r)\)<em>.</em></p>
+<h2 id="a-bounded-set"><a class="header" href="#a-bounded-set">A <code>Bounded Set</code></a></h2>
+<p>A set, \(S \subseteq \R^n\), is <strong>bounded</strong> iff there exists \(x \in \R^n\) and \(r &gt; 0\) such that \(S \subseteq B(x, r)\).</p>
+<p>In other words, a set is <strong>bounded</strong> if we can find a ball that contains \(S\).</p>
+<h2 id="the-complement-of-a-set"><a class="header" href="#the-complement-of-a-set">The Complement of a Set</a></h2>
+<p>Let \(S \subseteq \R^n\), then we define \(S^c := \R^n \setminus S = \left\{ t\in \R^n : t\not\in S\right\}\).</p>
+<p>Note that the \(\setminus\) operator is <code>\setminus</code> in \(\LaTeX\). It computes the difference between two sets.</p>
+<h2 id="cauchys-mistake"><a class="header" href="#cauchys-mistake">Cauchy’s Mistake</a></h2>
+<p><code>TODO</code>. Perhaps see <a href="https://math.stackexchange.com/questions/1250968/where-is-cauchys-wrong-proof">this StackExchange post?</a></p>
+<h2 id="interior-point-of-a-set"><a class="header" href="#interior-point-of-a-set"><code>Interior Point</code> of a Set</a></h2>
+<p>A point \(x \in \R^n\) is an <strong>interior point</strong> of a set, \(S\subseteq \R^n\), iff \(\exists r.\ B(x, r) \subseteq S\).</p>
+<p>In other words, if we can find a “small enough” ball (but still with non-zero size) around \(x\) that is a subset of \(S\), then it is an interior point of \(S\).</p>
+<details><summary>Interior Point Demonstration</summary>
+<iframe src="https://www.desmos.com/calculator/7izucmc1fz?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</details>
+<p>We define \(S^{\text{int}} := \left\{ x : \left(\exists r.\ B(x, r) \subseteq S \right)\right\}\). In other words, \(S^{\text{int}}\) is the set of all interior points of \(S\).</p>
+<h2 id="boundary-points-of-a-set"><a class="header" href="#boundary-points-of-a-set"><code>Boundary Points</code> of a Set</a></h2>
+<p>We denote the boundary points of a set with \(\partial S\). (In \(\LaTeX\), \(\partial\) is typed as <code>\partial</code>.)</p>
+<p>Again, if \(S \subseteq \R^n\),
+\[
+\partial S := \left\{x \in \R^n\ :\ \forall r. \left(\left(B(x, r) \cap S \neq \emptyset \right)\wedge \left(B(x, r) \cap S^C \neq \emptyset \right)\right) \right\}
+\]</p>
+<p>Intuitively, \(x\) is a boundary point of \(S\) iff any ball centered at \(x\) contains points in \(S\) and points outside \(S\).</p>
+<p>Note that it is possible that \(\partial S = \emptyset\).</p>
+<p>Here’s a nice diagram that visualizes a few of our terms so far.</p>
+<p><img src="week_2/./set_definitions_diagram.svg" alt="A visual of a set, its boundary points, and its complement" /></p>
+<blockquote>
+<p><strong>Note:</strong></p>
+<p>Visuals, like the one above, can be helpful, but they can also be <span style="font-family: chiller;">dangerous</span>! It’s easy to think that because you can draw some sets, you can draw <strong>all</strong> sets!</p>
+<p>A good example of a hard-to-draw set is the <a href="https://en.wikipedia.org/wiki/Cantor_set"><em>Cantor Set</em></a>.</p>
+</blockquote>
+<h2 id="a-closed-set"><a class="header" href="#a-closed-set">A <code>Closed</code> Set</a></h2>
+<p>\(S\) is <code>closed</code> iff \(\partial S \subseteq S\).</p>
+<p>Less formally, a set is closed if it includes <em>all</em> of its boundary points.</p>
+<h2 id="an-open-set"><a class="header" href="#an-open-set">An <code>Open</code> Set</a></h2>
+<p>\(S\) is <code>open</code> iff \(\partial S \subseteq S^C\).</p>
+<p>Less formally, a set is open if it includes <em>none</em> of its boundary points.</p>
+<h3 id="sets-can-be-both-open-and-closed"><a class="header" href="#sets-can-be-both-open-and-closed">Sets can be both open and closed</a></h3>
+<p>Note that sets with no boundary points are <strong>both</strong> open and closed. A common example is \(S = \R^n\), where \(\partial S\) is empty as \(S^c\) is empty. Thus, \(S\) is both closed (vacuously) and open, and such sets are commonly called <em>clopen</em> sets. Similarly, sets that contain only <em>some</em> of their boundary points are neither open nor closed.</p>
+<h2 id="the-closure-of-a-set"><a class="header" href="#the-closure-of-a-set">The <code>Closure</code> of a Set</a></h2>
+<p>We define the closure of a set as \(\bar{S} := S \cup \partial S\).</p>
+<p>In English, the closure of \(S\) is \(S\) and its boundary points.</p>
+<h2 id="the-neighborhood-of-a-point"><a class="header" href="#the-neighborhood-of-a-point">The <code>Neighborhood</code> of a Point</a></h2>
+<p>For \(x \in \R^n\), the neighborhood of \(x\) is <em>any</em> set \(S\) such that \(x\) is an interior point of \(S\); i.e. a set such that it is possible to draw a ball with a sufficiently small radius at \(x\) fully contained in the set.</p>
+<p>The notion of a neighborhood is frequently used when it’s important to establish a proposition about points close to \(x\).</p>
+<div style="break-before: page; page-break-before: always;"></div><div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<h1 id="set-theorems"><a class="header" href="#set-theorems">Set Theorems</a></h1>
+<p>With our <a href="week_2/./set_definitions.html">definitions</a>, we can now establish some theorems about sets.</p>
+<h2 id="point-categorization"><a class="header" href="#point-categorization">Point Categorization</a></h2>
+<p>For any set \(S\subseteq\R^n\) and any point \(x\in\R^n\), exactly one of the following is true:</p>
+<ol>
+<li>\(B(x, r) \subseteq S\) for sufficiently small \(r &gt; 0\).</li>
+<li>Both \(B(x, r) \cup S \ne \emptyset\) and \(B(x, r) \cup S^c \ne \emptyset\) for all positive real \(r\).</li>
+<li>\(B(x, r) \cup S = \emptyset\) for sufficiently small \(r &gt; 0\). (Alternatively, \(B(x, r) \subseteq S^c\) for sufficiently small \(r &gt; 0\).)</li>
+</ol>
+<p>While this is not difficult to understand when written like this, the definitions allow us to neatly categorize all points into <strong>interior points</strong> (1), <strong>boundary points</strong> (2), or <strong>interior points of the <em>complement</em> set</strong> (3).</p>
+<h2 id="relationship-between-a-set-and-its-complement"><a class="header" href="#relationship-between-a-set-and-its-complement">Relationship Between a Set and its Complement</a></h2>
+<p>The following pairs of statements are equivalent.</p>
+<ul>
+<li>\(S\) is open, \(S^c\) is closed.</li>
+<li>\(S\) is closed, \(S^c\) is open.</li>
+</ul>
+<p>Let’s prove the case where \(S\) is open!</p>
+<blockquote>
+<p><strong>Note:</strong> The case where \(S\) is closed can be shown as a consequence of the first case - just plug in \(S^c\) for \(S\) and remember that \((S^c)^c = S\)!</p>
+</blockquote>
+<p>Because \(S\) is open, then all of the boundary points of \(S\) must be outside of \(S\). Translated into math, \(\partial S \subseteq \R^n \setminus S\).</p>
+<p><img src = "./S_and_its_complement.svg" style = "border-radius: 6px; display: block; margin-left: auto; margin-right: auto; max-width: 300px;"></img></p>
+<p>\(\R^n \setminus S\) is just \(S^c\), so \(\partial S \subseteq S^c\). We have <em>almost</em> shown that \(S^c\) satisfies the definition of a <em>closed</em> set. To finish, we only need to show that \(\partial S = \partial S^c\).</p>
+<p>However, remember the definition of the boundary of \(S\), that is, all points \(x\) such that both \(B(x, r) \cup S \ne \emptyset\) and \(B(x, r) \cup S^c \ne \emptyset\) for \(r \in\R^+\). By the same definition the boundary of \(S^c\) is all points \(x\) such that both \(B(x, r) \cup S^c \ne \emptyset\) and \(B(x, r) \cup (S^c)^c \ne \emptyset\) for \(r \in\R^+\). Note that these statements are equivalent, as \((S^c)^c = S\)! Therefore, \(S\) is open implies \(S^c\) is closed. <span style="float: right;">☺</span></p>
+<p>This should make sense intuitively; the boundary of a set and its complement shouldn’t be different from the boundary of a complement of a set and its own complement.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="connecting-boolean-and-set-operators"><a class="header" href="#connecting-boolean-and-set-operators">Connecting Boolean and Set Operators</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<p>The proofs we did with <a href="week_2/../week_1/boolean_logic.html">boolean logic</a> can be applied to sets!</p>
+<p>Say we have sets \(S\) and \(T\), and propositions \(A\) and \(B\). In general, we can map boolean operators to set operators:</p>
+<style>
+/* Give the set operation diagrams a minimum width to prevent them from disappearing on small-width screens. */
+img.set_op_demo {
+    min-width: 40px;
+    border-radius: 4px;
+
+    transition: 0.3s ease transform, 0.4s ease box-shadow;
+}
+
+
+/* Devices with thin screens. */
+@media (max-width: 640px) {
+    /* Make the image easier to see on hover. */
+    img.set_op_demo:hover {
+        box-shadow: 0 0 2px rgba(100, 100, 100, 0.5);
+        transform: translate(-50%, -10%) scale(2.3);
+    }
+}
+</style>
+<table>
+<thead><th>Boolean Operator</th><th>Set Operation</th><th></th>
+<tbody>
+<tr><td>
+<p>\(A \vee B\)</p>
+</td><td>
+<p>\(S \cup T\)</p>
+</td><td>
+<img alt="Any element in S union T is in S OR T" src="week_2/./set_operations/union.svg" class="set_op_demo"/>
+</td></tr>
+<tr><td>
+<p>\(A \wedge B\)</p>
+</td><td>
+<p>\(S\cap T\)</p>
+</td><td>
+<img alt="Any element in S intersection is in S AND T" src="week_2/./set_operations/intersection.svg" class="set_op_demo"/>
+</td></tr>
+<tr><td>
+<p>\(\neg A\)</p>
+</td><td>
+<p>\(S^c\)</p>
+</td><td>
+<img alt="Any element in S's complement is not in S" src="week_2/./set_operations/complement.svg" class="set_op_demo"/>
+</td></tr>
+<tr><td>
+<p>\(A \iff B\)</p>
+</td><td>
+<p>\(S = T\)</p>
+</td><td>
+<img alt="Any element in S is also in T" src="week_2/./set_operations/equals.svg" class="set_op_demo"/>
+</td></tr>
+</tbody></table>
+<p>For example, say we have two sets \(U\) and \(V\).
+\[
+\begin{aligned}
+S &amp;= \left\{ a\ :\ a \in U \wedge a \in V \right\}\\
+&amp;= \left\{ a\ :\ a \in U \right\} \cap \left\{ a\ :\ a \in V\right\}\\
+&amp;= U \cap V
+\end{aligned}
+\]</p>
+<p>Similarly,
+\[
+\begin{aligned}
+&amp; S = T\\
+\iff&amp; \forall a, \left(a \in S \iff a \in T\right)
+\end{aligned}
+\]</p>
+<p>Notice that by applying the boolean operators to elements in each set, we get the corresponding set operation!</p>
+<!-- ## Let's prove something! -->
+<div style="break-before: page; page-break-before: always;"></div><h1 id="open-closed-and-completion"><a class="header" href="#open-closed-and-completion">Open, Closed, and Completion</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<p>We’ve learned what open and closed sets are. We know what it means to complete a set, but how does completing a set change its boundary? Let’s investigate.</p>
+<h2 id="partial-overlines-subseteq-partial-s"><a class="header" href="#partial-overlines-subseteq-partial-s">\(\partial \overline{S} \subseteq \partial S\)</a></h2>
+<p>This was used as a lemma in the quiz section notes, but it’s useful in its own right, so let’s call it a theorem.</p>
+<p>Let \(x \in \partial \overline{S}\). We want to show that a ball, \(B(x, r)\) (for arbitary \(r\)), intersects both points in \(S\) and in \(S^c\). If we do this, we’ve satisfied the definition of a boundary point of \(S\) for every point \(x \in \partial \overline{S}\).</p>
+<p>Now, because \(x \in \partial \overline{S}\), \(B(x, r)\) contains some \(y \in \overline{S}\) and \(z \in \left(\overline{S}\right)^c\) for any choice of \(r &gt; 0\). </p>
+<p>Let’s first show the existence of some point in \(B(x, r)\) also in \(S\). Expanding the definition of \(\overline{S}\),
+\[
+\begin{aligned}
+&amp;y\in \overline{S}\\
+\implies&amp; y \in S \cup \partial S\\
+\end{aligned}
+\]</p>
+<p>As such, \(y\) is in either \(S\) or \(\partial S\) (or both!).</p>
+<ul>
+<li>If \(y \in S\), then we’re done (with this part)! We’ve shown that \(y\), a point in \(B(x, r)\), is also in \(S\)!</li>
+<li>If \(y \in \partial S\), then as \(B(x, r)\) is an open set, there exists a ball with a sufficiently small radius centered at \(y\), \(B(y, r_2)\) such that $\(B(y, r_2) \subseteq B(x, r)\). As \(y\) is a boundary point of \(S\), the ball \(B(y, r_2)\) must contain a point \(y’ \in S\) (and some point in \(S^c\)). Therefore, as \(y’ \in B(y, r_2) \subseteq B(x, r)\), we know that \(y’\) is a point in \(B(x, r)\) also in \(S\), completing this case.</li>
+</ul>
+<p>We now just need to show that our ball contains a point in \(S^c\). We’ll do this using point \(z \in \left(\overline{S}\right)^c\):
+\[
+\begin{aligned}
+&amp;z \in \overline{S}^c\\
+\implies&amp; z \in \left(S \cup \partial S\right)^c\\
+\implies&amp; z \in S^c \cap \left(\partial S\right)^c &amp;&amp; \texttt{...from DeMorgan’s laws}
+\end{aligned}
+\]</p>
+<p>From this, we have that \(z \in S^c\) because if \(z\) is in <strong>both</strong> \((\partial S)^c\) and \(S^c\), it must be in \(S^c\).</p>
+<p>Because we’ve shown that a ball of arbitrary size centered at \(x\) must contain a point in \(S^c\) and \(S\), and so, because \(x\) is an arbitrary point in \(\partial \overline{S}\), we have that every point in \(\overline{S}\) satisfies the definition of a boundary point of \(S\).</p>
+<p>We can therefore conclude that \(\partial \overline{S} \subseteq S\).<span style="float: right;">☺</span></p>
+<blockquote>
+<p><strong>Aside: \(\partial S = \partial \bar{S}\)? A Note about the Rationals, Completion, and Boundaries</strong></p>
+<p>At a glance, it might seem that, for any set \(S\), \(\partial S = \partial \bar{S}\). You might think this because \(\bar{S} = \partial S \cup S\), so they should have the same boundary points, right? </p>
+<p>Wrong!</p>
+<p>Consider the set of rational numbers, \(\Q\). Rational numbers, like \(\frac{245}{246}\), are separated by irrational numbers, even though rational numbers can get arbitrarily close to one another.</p>
+<p>As such, if we choose <em>any</em> real number \(x\), a ball with positive radius centered at \(x\) will contain rational numbers, as well as the irrational numbers between them. In other words, \(\forall x \in \R, \forall r, B(x, r) \cap \Q \neq \emptyset \land B(x, r) \cap \Q^C \neq \emptyset\), satisfying our definition of a boundary point. As such, \(\partial Q = \R\).</p>
+<p>Clearly, we have \(\bar{\Q} = \Q \cap \partial \Q = \Q \cap \R = \R\).</p>
+<p>... but \(\R\) has no boundary points! As such, \(\partial \Q \neq \partial \overline{\Q}\) because \(\partial \overline{\Q} = \partial \R = \emptyset\).<span style="float: right;">☺</span></p>
+</blockquote>
+<h2 id="closing-closed-sets"><a class="header" href="#closing-closed-sets">Closing Closed Sets</a></h2>
+<p>Say we have an arbitrary set \(S\). Must \(\bar{S}\) be closed?</p>
+<p>By definition, \(\bar{S} = S \cup \partial S\). As such, because \(\partial S \subseteq \partial S \cup S\), we have that \(\partial S \subseteq\bar{S}\).</p>
+<p>As we’ve proved that \(\partial \overline{S} \subseteq \partial S\), we conclude that \(\partial \bar{S} \subseteq\bar{S}\) and therefore \(\bar{S}\) is closed.</p>
+<h2 id="the-boundary-of-the-completion-of-a-set"><a class="header" href="#the-boundary-of-the-completion-of-a-set">The boundary of the completion of a set</a></h2>
+<p>Let \(S\) be an arbitrary set. Then \(\overline{\bar{S}} = \overline{S}\). Let’s prove it!</p>
+<p>We defined \(\overline{S} = \partial S \cup S\). As such,
+\[
+\begin{aligned}
+\overline{\bar{S}} &amp;= \partial \bar{S} \cup \bar{S}\\
+&amp;= \partial \bar{S} \cup \left(S \cup \partial S\right)
+\end{aligned}
+\]</p>
+<p>Above we showed that \(\partial \bar{S} \subseteq \partial S\). As such, \(\partial\bar{S} \subseteq \overline{\bar{S}}\), satisfying the definition of “closed”.<span style="float: right;">☺</span></p>
+<h2 id="unions-or-intersections-of-a-finite-number-of-open-or-closed-sets"><a class="header" href="#unions-or-intersections-of-a-finite-number-of-open-or-closed-sets">Unions or Intersections of a Finite Number of Open or Closed Sets</a></h2>
+<p>Unions or intersections of many sets which are all open or all closed more or less behave as one might expect, provided that “many” is still finite. We will present the proof that the intersection of a finite number of open sets is open, the union of a finite number of open sets is open, and leave the other two cases as an exercise.</p>
+<p>Let us first show that the intersection of a finite number of open sets is open. Suppose that \(S = \cap_{i = 1}^n S_i\) for a finite positive integer \(n\) and open sets \(S_i\). To prove that \(S\) is open, it suffices to show that every point \(x \in S\) is an interior point of \(S\).</p>
+<p>Let \(x \in S\) be given. We must have \(x \in S_i\) for all \(S_i\). As \(S_i\) is open, there exists some \(r_i &gt; 0\) such that for any \(0 &lt; r \le r_i\), we know that \(B(x, r)\) is a subset of \(S_i\). </p>
+<p>Consider the values \(R: \{r_1, r_2, ..., r_n\}\). Let \(r_k \in R\) be such that \(r_i \ge r_k\) for any \(r_i \in R\). Therefore, \(B(x, r_k)\) is a subset of every \(S_i\), and is therefore a subset of \(S\). Therefore, there exists a ball at \(x\) with some positive radius that is a subset of \(S\), so \(x\) is an interior point of \(S\).<span style="float: right;">☺</span></p>
+<p>The proof that the union of a finite number of open sets is open is even simpler. Consider \(S = \cup_{i = 1}^n S_i\), similar to before. We just need to show that every point \(x \in S\) is an interior point of \(S\).</p>
+<p>Let \(x \in S\) be given. By the construction of \(S\), we know that there is at least one set \(S_i\) such that \(x \in S_i\). As \(S_i\) is open, there exists some positive \(r\) such that \(B(x, r)\) is a subset of \(S_i\). But since \(B(x, r)\) is a subset of \(S_i\), we know that \(B(x, r)\) is a subset of \(S\). Therefore, there exists a ball at \(x\), namely, \(B\), with some positive radius that is a subset of \(S\), so \(x\) is an interior point of \(S\).<span style="float: right;">☺</span></p>
+<blockquote>
+<p>Note that, by knowing that the intersection of a finite number of open sets is itself open, you can show that the union of a finite number of closed sets is itself closed. What do we know about the <strong>complement</strong> of the union of a finite number of closed sets? Using a similar method, can you show that the intersection of a finite number of closed sets is itself closed?</p>
+</blockquote>
+<h2 id="how-about-infinite-sets"><a class="header" href="#how-about-infinite-sets">How About Infinite Sets?</a></h2>
+<p>As it turns out, two of the statements we proved in the above section become false if we allow ourselves to consider an infinite amount of sets. Namely, the intersection of an infinite number of open sets is not necessarily open, and the union of an infinite number of closed sets is not necessarily closed. The latter is a homework problem (😉) so we won’t provide a counterexample for that one, but we will show by example the existence of a set of infinite open sets whose intersection is not open.</p>
+<p>Consider the infinite series of sets \(\{S_1, S_2, ...\}\) where \(S_i = B\left(0, \frac{1}{i}\right)\). Let \(S = \cap_{i = 1}^{\infty} S_i\). Let us show that \(S\) is not open.</p>
+<blockquote>
+<p>Sidenote: Remember that closed is not the exact opposite of open, so it isn’t enough to show that \(S\) is closed!</p>
+</blockquote>
+<p>To show that \(S\) is not open, we just need to find a point in \(S\) that is not an interior point. All points in any set are either an interior point or a boundary point, so it suffices to show the existence of a point \(x \in S\) that is a boundary point, that is, a ball of any radius at \(x\) will intersect both \(S\) and \(S^c\).</p>
+<p>Proposition. \(0 \in S\) is not an interior point of \(S\).</p>
+<p>To show that \(0\) is in \(S\), we just need to show that \(\forall i \in \N \quad 0 \in S_i\). This is true as \(S_i = B\left(0, \frac{1}{i}\right)\), the center is always in the ball as the ball has a positive radius.</p>
+<p>To show that \(0\) is not an interior point of \(S\), we can prove that for any \(r\) there exists some point \(x \in B(0, r)\) that is not in \(S\). Consider a ball of radius \(r &gt; 0\) around \(0\). Let \(N = \lceil \frac{1}{r} \rceil + 1\), thus, as \(r\) is positive, \(N &gt; \frac{1}{r} \implies 0 &lt; \frac{1}{N} &lt; r\). </p>
+<p>Now, consider a point \(x\) such that \(||x|| = \frac{\frac{1}{N} + r}{2}\). As \(||x||\) is the average of \(\frac{1}{N}\) and \(r\), we know that \(||x||\) is strictly between the two numbers. Thus, \(x \not\in S_N = B\left(0, \frac{1}{N}\right)\), but \(x \in B(0, r)\). But if \(x \not\in S_N\), then \(x \not\in S\). Therefore, the intersection of any ball around \(0\) and the complement of \(S\) is not empty, demonstrating that \(0\) is not an interior point and therefore \(S\) is not open.<span style="float: right;">☺</span></p>
+<h2 id="references-1"><a class="header" href="#references-1">References</a></h2>
+<ul>
+<li>Section on 10/7/21</li>
+<li>Lecture notes for the section (published on Canvas)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="limit-definitions"><a class="header" href="#limit-definitions">Limit Definitions</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<h2 id="the-definition-of-a-limit"><a class="header" href="#the-definition-of-a-limit">The Definition of a Limit</a></h2>
+<p>The classical definition of a limit for a function \(f:\R\rightarrow\R\), the <strong>epsilon-delta</strong> definition, states that \(\lim_{x \to x_0} f(x) = L \iff \forall \epsilon &gt; 0 \enspace \exists \delta &gt; 0. \enspace |x - x_0| &lt; \delta \implies |f(x) - L| &lt; \epsilon\). Replacing the absolute value with a norm yields the generalized definition for \(f:\R^n\rightarrow\R\).</p>
+<p>\[
+\lim_{x \to x_0} f(x) = L \iff \forall \epsilon &gt; 0 \enspace \exists \delta &gt; 0. \enspace 0 &lt; ||x - x_0|| &lt; \delta \implies |f(x) - L| &lt; \epsilon
+\]</p>
+<p>Intuitively, by forcing \(x\) to be in a sufficiently small neighborhood of \(x_0\), we can guarantee that the value of \(f(x)\) is arbitrarily close to \(L\).</p>
+<blockquote>
+<p><strong>Note:</strong> An alternate definition of the limit.</p>
+<p>The above definition does not allow us to substitute \(x = x_0\). Some authors define a limit without this restriction, in which case,</p>
+<p>\[
+\lim_{x \to x_0} f(x) = L \iff \forall \epsilon &gt; 0 \enspace \exists \delta &gt; 0. \enspace ||x - x_0|| &lt; \delta \implies |f(x) - L| &lt; \epsilon
+\]</p>
+<p>Let’s study the difference between these two definitions.</p>
+<p>Say we have a function,
+\[
+f(x) = \begin{cases}
+1234 &amp; \text{iff } x = 0 \\
+x^2 &amp; \text{otherwise}
+\end{cases}
+\]</p>
+<p>If we use this alternate definition of a limit, \(\lim_{x \to 0} f(x)\) does not exist.</p>
+<p>To see why this is the case, let \(\epsilon = 0.1\).
+We then must show that for a neighborhood near \(x = 0\), there exists \(L\) such that \(|f(x) - L| &lt; \epsilon = 0.1\).</p>
+<p>For \(x\) arbitrarily close to zero, we have \(f(x) \approx 0\); however, for \(x = 0\), we have \(f(x) = 1234\). As such, there is no \(L\) that satisfies \(|f(x) - L| &lt; 0.1\) for all \(x\) arbitrarily close to zero (including zero), and so \(\lim_{x \to 0} f(x)\) does not exist.</p>
+<p>The <strong>only reason</strong> this limit doesn’t exist is because we can substitute \(x = 0\) into \(f(x)\) when computing the limit. If we use our original definition, we can’t do that, and so, we would then have \(\lim_{x\to 0} f(x) = 0\).</p>
+<p>While our definition (the first definition presented here) and the other definition have this difference, we rarely take limits at single-point discontinuities. As such, we can derive the same (or at least very similar) theorems with either.</p>
+</blockquote>
+<h2 id="defining-continuity"><a class="header" href="#defining-continuity">Defining Continuity</a></h2>
+<p>A function, \(f(t)\), is continuous on some domain, \(D\), if and only if it satisfies all of the following:
+\[
+\begin{aligned}
+\text{1.} &amp;&amp; \forall x \in D, \lim_{t \to x} f(t) \text{ exists} \\
+\text{2.} &amp;&amp; \forall x \in D, f(x) = \lim_{t \to x} f(t)
+\end{aligned}
+\]</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="limit-proofs"><a class="header" href="#limit-proofs">Limit Proofs</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<p><strong>Proposition:</strong> \(f: \R^2\to \R\), \(f(v) = v_1 + v_2\) is continuous.</p>
+<p>Let’s say \(\delta = \frac{\epsilon}{100}\) (we can choose any \(\delta\) as long as it works!).</p>
+<p>From the definition of continuity,
+\[
+\forall v_0 \in \R^2,\enspace \forall v \in \R^2,\enspace \forall \epsilon &gt; 0,\enspace \exists \delta &gt; 0.\enspace \left(\norm{v - v_0} &lt; \delta\right) \to \left(\norm{f(v) - f(v_0)} &lt; \epsilon\right)
+\]</p>
+<p>We want to find \(x, y, w, z \in \R\) that satisfy,
+\[
+\norm{\begin{pmatrix}x\\y\end{pmatrix} + \begin{pmatrix}w\\z\end{pmatrix}} &lt; \delta = \frac{\epsilon}{100}
+\]</p>
+<p>...and for all of these...
+\[
+.
+\]</p>
+<h2 id="continuity-of-a-function-over-ℝⁿ"><a class="header" href="#continuity-of-a-function-over-ℝⁿ">Continuity of a Function Over ℝⁿ</a></h2>
+<p><strong>Theorem:</strong> If \(f: D \to \R^n\), then \(f\) is continuous iff its components are continuous.</p>
+<p><strong>↑ Its proof might be a homework problem. Proof omitted!</strong></p>
+<h2 id="continuity-and-composition"><a class="header" href="#continuity-and-composition">Continuity and Composition</a></h2>
+<p>Say we have functions \(f : A \to B\) and \(g : B \to C\) and \(f\) is continuous over \(A\) and \(g\) is continuous over \(B\).</p>
+<p><img src="week_3/./mapping_from_a_to_b_to_c.svg" alt="f maps from A to B and g maps from B to C. We can think of this as f taking every point in a blob, A, to a point in a blob, B, and g acting similarly." /></p>
+<p><code>TODO</code></p>
+<h2 id="continuity-and-addition"><a class="header" href="#continuity-and-addition">Continuity and Addition</a></h2>
+<p><code>TODO</code></p>
+<h2 id="continuity-and-products"><a class="header" href="#continuity-and-products">Continuity and Products</a></h2>
+<p><code>TODO</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sequences"><a class="header" href="#sequences">Sequences</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<h2 id="formal-definition-of-a-sequence"><a class="header" href="#formal-definition-of-a-sequence">Formal Definition of a Sequence</a></h2>
+<p>A sequence is a function \(f: \N \rightarrow X\) for some set \(X\). Instead of writing \(f(1), f(2), ...\) to refer to the individual terms of a sequence, it is common to use \(a_1, a_2, ...\) instead.</p>
+<h2 id="the-limit-of-a-sequence-leftrightarrow-convergence"><a class="header" href="#the-limit-of-a-sequence-leftrightarrow-convergence">The Limit of a Sequence \(\leftrightarrow\) Convergence</a></h2>
+<p>How do we understand the expression \(\lim\limits_{n \to \infty} a_n\)? Intuitively, this should equal whatever the sequence <strong>converges</strong> to, or the value that the sequences gets arbitrarily close to.</p>
+<p>We can modify the \(\epsilon\)-\(\delta\) definition as thus: \[\lim\limits_{n \to \infty} a_n = L \iff \forall \epsilon &gt; 0 \exists N \in \N : \forall n \ge N, ||a_n - L|| &lt; \epsilon\]</p>
+<p>If the limit exists, then we say the sequence <em>converges to \(L\)</em>.</p>
+<blockquote>
+<p>Finding the limit of a sequence (or even demonstrating a sequence converegs) is usually a lot harder than finding the limit of a function approaching infinity. For example, the function \(f(x) = \frac{1}{x^3\sin x}\) does not have a limit as \(x\) goes to infinity, as \(\sin x\) has infinitely many zeroes. However, it is not known whether the sequence defined by \(a_n = \frac{1}{n^3\sin n}\) converges.</p>
+<p>Loosely speaking, the resolution to this problem depends on whether or not fractional approximations for \(\pi\) improve faster than \(x^3\). The limit is known to be \(0\) for \(\frac{1}{n^k\sin x}\) for roughly \(k \ge 7.7\).</p>
+</blockquote>
+<h2 id="convergence-and-sets"><a class="header" href="#convergence-and-sets">Convergence and Sets</a></h2>
+<p>Let’s demonstrate some theorems relating sets, convergence, and continuity!</p>
+<h3 id="for-any-element-in-the-closure-there-exists-a-sequence-converging-to-it"><a class="header" href="#for-any-element-in-the-closure-there-exists-a-sequence-converging-to-it">For Any element in the Closure, There Exists a Sequence Converging to It</a></h3>
+<p>Given a subset \(S \subseteq \R^n\), \(x \in \bar{S}\) is equivalent to the existence of a sequence \({a_i} \subseteq S\) such that \(\lim\limits_{n \to \infty} a_n = x\).</p>
+<p>We are demonstrating equivalence, so we need to show two different directions. Suppose that \(x \in \bar{S}\). Remember that \(\bar{S} = S \cup \partial S\), so either \(x \in S\) or \(x \in \partial S\). If \(x \in S\), then the constant sequence <em>obviously</em> converges (regardless of the choice of \(n\), \(|a_n - x| = 0 &lt; \epsilon\) for any \(\epsilon\)). Otherwise, by the definition of \(x \in \partial S\), a ball of any positive radius centered \(x\) intersects \(S\). Define \(a_i\) as the point guaranteed to exist in the intersection of \(S\) and \(B\left(x, \frac{1}{i}\right)\). Then, for the convergence proof, let \(N = \left\lceil \frac{2}{\epsilon}\right\rceil\). Therefore, for any \(n \ge N \rightarrow \frac{2}{n} \le \epsilon\), we have \(|a_n - x| &lt; \frac{1}{n} &lt; \frac{2}{n} \le \epsilon\).</p>
+<p>Now, suppose that \(\lim\limits_{n \to \infty} a_n = x\), where \({a_i} \subseteq S\). Note that either \(x \in S\) (in which case we are done) or \(x \in S^c\). In the latter case, we just need to show that for any ball centered at \(x\), there is a point in the ball that is also in \(S\). (Note that \(x\) automatically satisfies that the intersection of the ball and \(S^c\) is non-empty.) By the definition of convergence, for any \(\epsilon &gt; 0\), there is some positive integer \(N\) such that \(n \ge N\) guarantees that \(|a_n - x| &lt; \epsilon\). Consider the ball \(B(x, \epsilon)\). By applying the definition of convergence, we can guarantee the existence of some \(n\) such that \(|a_n - x| \le \epsilon\), which implies \(a_n \in B(x, \epsilon)\). Therefore, \(S \cap B(x, \epsilon) \ne \emptyset\) and we are done.</p>
+<h4 id="obviously"><a class="header" href="#obviously">Obviously...</a></h4>
+<details>
+<summary>Dictionary of Definitions of Terms Commonly Used in Math lectures</summary>
+CLEARLY:
+I don't want to write down all the "in- between" steps.
+<p>TRIVIAL:
+If I have to show you how to do this, you’re in the wrong class.</p>
+<p>OBVIOUSLY:
+I hope you weren’t sleeping when we discussed this earlier, because I refuse to repeat it.</p>
+<p>RECALL:
+I shouldn’t have to tell you this, but for those of you who erase your memory tapes after every test...</p>
+<p>WLOG (Without Loss Of Generality):
+I’m not about to do all the possible cases, so I’ll do one and let you figure out the rest.</p>
+<p>IT CAN EASILY BE SHOWN:
+Even you, in your finite wisdom, should be able to prove this without me holding your hand.</p>
+<p>CHECK or CHECK FOR YOURSELF:
+This is the boring part of the proof, so you can do it on your own time.</p>
+<p>SKETCH OF A PROOF:
+I couldn’t verify all the details, so I’ll break it down into the parts I couldn’t prove.</p>
+<p>HINT:
+The hardest of several possible ways to do a proof.</p>
+<p>BRUTE FORCE (AND IGNORANCE):
+Four special cases, three counting arguments, two long inductions, “and a partridge in a pair tree.”</p>
+<p>SOFT PROOF:
+One third less filling (of the page) than your regular proof, but it requires two extra years of course work just to understand the terms.</p>
+<p>ELEGANT PROOF:
+Requires no previous knowledge of the subject matter and is less than ten lines long.</p>
+<p>SIMILARLY:
+At least one line of the proof of this case is the same as before.</p>
+<p>CANONICAL FORM:
+4 out of 5 mathematicians surveyed recommended this as the final form for their students who choose to finish.</p>
+<p>TFAE (The Following Are Equivalent):
+If I say this it means that, and if I say that it means the other thing, and if I say the other thing...</p>
+<p>BY A PREVIOUS THEOREM:
+I don’t remember how it goes (come to think of it I’m not really sure we did this at all), but if I stated it right (or at all), then the rest of this follows.</p>
+<p>TWO LINE PROOF:
+I’ll leave out everything but the conclusion, you can’t question ‘em if you can’t see ‘em.</p>
+<p>BRIEFLY:
+I’m running out of time, so I’ll just write and talk faster.</p>
+<p>LET’S TALK THROUGH IT:
+I don’t want to write it on the board lest I make a mistake.</p>
+<p>PROCEED FORMALLY:
+Manipulate symbols by the rules without any hint of their true meaning (popular in pure math courses).</p>
+<p>QUANTIFY:
+I can’t find anything wrong with your proof except that it won’t work if x is a moon of Jupiter (Popular in applied math courses).</p>
+<p>PROOF OMITTED:
+Trust me, It’s true.</p>
+<p><a href="https://www.math.utah.edu/%7Echerk/mathjokes.html">Credits</a></p>
+</details>
+<h3 id="continuity"><a class="header" href="#continuity">Continuity!</a></h3>
+<p>We can relate sequences in \(\R^n\) to continuity with the following theorem:</p>
+<p>Given \(S \subseteq \R^n\) and a function \(f: S \rightarrow \R^m\), \(f\) is continuous at a point \(a \in S\) if and only if for any sequence \(\{x_k\}_{k = 1}^{\infty} \in S\) that converges to \(a\), the sequence \(\{f(x_k)\}_{k = 1}^{\infty} \in \R^m\) converges to \(f(a)\).</p>
+<p>The fowards direction is fairly straightforward. Given \(f\) is continuous at \(a\), consider some fixed positive \(\epsilon\). There is some positive \(\delta\) such that for any \(y \in S\), \(||y - a|| &lt; \delta \implies ||f(y) - f(a)|| &lt; \epsilon\). If \({x_k}\) converges, then whatever \(\delta\) is, there exists some \(K \in \N\) that guarantees \(||x_k - a|| &lt; \delta\) if \(k \ge K\), guaranteeing \(||f(x_k) - f(a)|| &lt; \epsilon\).</p>
+<p>The backwards direction is more sophisticated, and uses proof by contradiction. Suppose that for any converging sequence \(\{x_k\}_{k = 1}^{\infty} \in S\) to \(a\), the sequence \(\{f(x_k)\}_{k = 1}^{\infty} \in \R^m\) converges to \(f(a)\). For contradiction, suppose that \(f\) is not continuous at \(a\). Therefore, there exists some \(\epsilon &gt; 0\) such that for any choice of \(\delta\), there is some \(y \in S\) such that both \(||y - a|| &lt; \delta\) and \(||f(y) - f(a)|| &gt; \epsilon\).</p>
+<p>Let \(x_k\) be the vector guaranteed to exists that satisfies \(||x_k - a|| &lt; \delta\) and \(||f(x_k) - f(a)|| &gt; \epsilon\) for \(\delta = \frac{1}{k}\). As when \(k\) gets arbitrarily big, \(\delta\) becomes arbitrarily close to \(0\), we have a sequence that converges to \(a\), but violates the condition that \(\{f(x_k)\}_{k = 1}^{\infty} \in \R^m\) converges to \(f(a)\). Contradiction, therefore, we must have \(f\) continuous at \(a\).</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-completeness-axiom"><a class="header" href="#the-completeness-axiom">The Completeness Axiom</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<p>The Completeness Axiom states that for a well-ordered set \(S\), given any subset \(X\) with an upper bound \(a\) (that is, \(X\) has the property that there is an element \(a \in S\) such that for any \(x \in X\), \(x &lt; a\), then there exists a <em>least</em> upper bound \(\alpha \in S\) of \(X\) such that \(\alpha\) is an upper bound, and for any \(a &lt; \alpha\), there is some \(x \in S\) such that \(x \ge a\). Also, if a subset has a lower bound \(b\), then there exists a <em>greatest</em> upper bound \(\beta\).</p>
+<p>We will take this as an axiom for the real numbers. This axiom does not apply to the rationals - consider the subset of rationals less than (or greater than) some irrational number. </p>
+<p>We need the completeness axioms for some convergence proofs.</p>
+<h2 id="a-monotonic-increasing-bounded-sequence-is-convergent"><a class="header" href="#a-monotonic-increasing-bounded-sequence-is-convergent">A Monotonic Increasing Bounded Sequence is Convergent</a></h2>
+<p>Using the Completeness Axiom, we can show that for any monotonically increasing and bounded sequence \({x_k}_{k = 1}^{\infty}\) where \(x_k \in \R\), it is true that the sequence converges.</p>
+<p>Define the set \(S := {x_k: k \in \N}\), which is a subset of \(\R\). As we know that \({x_k}\) is bounded, so is \(S\). Therefore, the supremum of \(S\) exists. Let \(\alpha = \sup(S)\). In particular, any \(a &lt; \alpha\) is not an upper bound, that is, there is some term of the sequence \(x_i\) such that \(x_i &gt; a\).</p>
+<p>We claim that the sequence \({x_k}\) converges to \(\alpha\). Given a fixed \(\epsilon &gt; 0\), we can show that there exists some \(x_N\) such that \(|\alpha - x_N| &lt; \epsilon\). Note that, as \(\alpha\) is the supremum, \(|\alpha - x_N| = \alpha - x_n\)). Suppose otherwise, and for all \(x_N\), \(\alpha - x_N \ge \epsilon \implies x_N \le \alpha - \epsilon\). But since this is true for all \(x_N\), we have \(\alpha - \epsilon\) is an upper bound of \(S\), which contradicts \(\alpha\) being the supremum of \(S\). Therefore, there does exist some \(x_N\) such that \(\alpha - x_N &lt; \epsilon\). Since the sequence is monotonically increasing, for all \(n \ge N\), we know that \(\alpha - x_n &lt; \alpha - x_N &lt; \epsilon\), demonstrating convergence.</p>
+<h2 id="herons-method-of-square-roots"><a class="header" href="#herons-method-of-square-roots">Heron’s Method Of Square Roots</a></h2>
+<p>This is a veerrrry old method of computing the square root of a number - there is evidence that the Babylonians knew of what some people call today <strong>Heron’s Method</strong>. (Paying homage to the Babylonians, this method is also called the <strong>Babylonian Method</strong>.)</p>
+<p>Given some positive real number \(a\), we would like to compute \(\sqrt{a}\). How can we compute it with a high degree of accuracy?</p>
+<p>Start with a (positive) guess, which we will call \(x_0\). Realistically, we would probably choose one of the integers whose square bounds \(a\), but in principle we can choose whatever we want.</p>
+<p>Observe that \(\sqrt{a}\cdot\sqrt{a} = x_0\cdot\frac{a}{x_0} = a\), and therefore exactly one of \(x_0\) and \(\frac{a}{x_0}\) is greater than \(\sqrt{a}\) and exactly one is less. Perhaps a good next guess is the average of \(x_0\) and \(\frac{a}{x_0}\)! Let this quantity be \(x_1\), and in general, \(x_{n + 1} = \frac{1}{2}\left(x_n + \frac{a}{x_n}\right)\). This sequence converges to \(\sqrt{a}\)!</p>
+<p>To demonstrate that this method works, first note that \(x_1 \ge \sqrt{a}\). To demonstrate this, let \(f(x) = \frac{1}{2}\left(x + \frac{a}{x}\right)\). We have \(f’(x) = \frac{1}{2} - \frac{a}{2x^2}\), so the minimum of \(f(x)\) occurs at \(x = \sqrt{a}\), where \(f(\sqrt{a}) = \sqrt{a}\). Therefore, after a single iteration, we are guaranteed \(x_1 \ge \sqrt{a}\) regardless of the value of \(x_0\).</p>
+<p>Therefore, if \(n \ge 1\), we have \(x_n \ge \sqrt{a}\). Note that \(x_{n + 1} \le x_n\) as \(x_n \ge \sqrt{a} \implies a \le x_n^2 \implies \frac{a}{x_n} \le x_n \implies \frac{a}{2x_n} \le \frac{x_n}{2} \implies \frac{x_n}{2} + \frac{a}{2x_n} = x_{n + 1} \le x_n\). Therefore, the sequence \((x_n)_{n = 1}^\infty\) is monotonically decreasing and has a lower bound, so there exists some infimum. </p>
+<p>It remains to show that this infimum is indeed \(\sqrt{a}\). Suppose the infimum is actually some \(\alpha &gt; \sqrt{a}\). Let \(\alpha = \sqrt{a} + \epsilon\) for some positive real \(\epsilon\). Therefore, as \(\alpha\) is the infimum, there exists some iteration \(x_n\) such that \(\alpha \le x_n &lt; \alpha + \epsilon\). Therefore, \(x_{n + 1} = \frac{x_n}{2} + \frac{a}{2x_n} &lt; \frac{\sqrt{a} + 2\epsilon}{2} + \frac{a}{2\sqrt{a}}) = \sqrt{a} + \epsilon = \alpha\), which contradicts \(\alpha\) as the minimum. Therefore, this sequence produced by Heron’s Method converges to \(\sqrt{a}\).</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-garbanzo-wirestress--wait-what"><a class="header" href="#the-garbanzo-wirestress--wait-what">The Garbanzo-Wirestress ... wait what?</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<h2 id="the-statement"><a class="header" href="#the-statement">The Statement</a></h2>
+<p>The <strong>Bolzano-Weirstrass</strong> Theorem (often abbreviated ‘BW’) states that every bounded sequence in \(\R\) has a <em>convergent subsequence</em>.</p>
+<blockquote>
+<p>A <strong>subsequence</strong> \(\left(x_{n_k}\right)_{k = 1}^\infty\) of some sequence \((x_n)_{n = 1}^{\infty}\) is composed of some terms of \(x_n\) such that if \(i &lt; j\), \(n_i &lt; n_j\). Informally, a subsequence takes some terms of a sequence, but keeps the terms in the relative order they appeared in the sequence.</p>
+</blockquote>
+<p>To prove BW, suppose that the sequence \((x_n)_{n = 1}^\infty\) is bounded above by \(c_2\) and below by \(c_1\). Let us map the sequence to the interval \([0, 1]\).</p>
+<p>Consider the intervals \(\left[0, \frac{1}{2}\right]\) and \(\left[\frac{1}{2}, 1\right]\). As the sequence \((x_n)\) is an infinite sequence, at least one of the halves contains an infinite amount of elements. Let this half be the interval \(I_1\).</p>
+<p>Let \(I_n = [a, b]\) for some \(n \ge 1\) containing an infinite amount of elements of \((x_n)\). We can then define \(I_{n + 1}\) as either \(\left[a, \frac{a + b}{2} \right]\) or \(\left[\frac{a + b}{2}, b\right]\), whichever contains an infinite number of elements. The length of the sequence of intervals \(I_N\) goes to zero, and \(I_{n + 1} \subseteq I_n\), therefore, there exists some number \(x \in [0, 1]\) that is in all of the intervals. Therefore, we can construct a subsequence \(x_{n_k} \in I_k\), and \(n_{k + 1} &gt; n_k\) is always possible as each interval contains an infinite amount of elments of \((x_n)\). </p>
+<p><strong>BW can be extended to show that every bounded sequence in \(\R^n\) has a convergent subsequence.</strong></p>
+<p>In practice, we often use BW in relation to continuity of functions, as it allows us to assume there is always a term arbitrarily close to some point in the bounded set containing the sequence.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cauchy-sequences-and-compactness"><a class="header" href="#cauchy-sequences-and-compactness">Cauchy Sequences and Compactness</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<p>...These two concepts aren’t necessarily related. Whatever. Fite me.</p>
+<h2 id="cauchy-sequences"><a class="header" href="#cauchy-sequences">Cauchy Sequences</a></h2>
+<p>A sequence \((a_n)_{n = 1}^\infty) is <strong>Cauchy</strong> if for any positive \(\epsilon\), there is some positive integer \(N\) such that \(m, n \ge N\) guarantees \(a_m\) and \(a_n\) are \(\epsilon\)-close. \(||a_m - a_n|| &lt; \epsilon\).</p>
+<p>The great thing about a sequence being Cauchy is that being Cauchy is <em>equivalent</em> to being convergent in \(\R^n\). But demonstrating a sequence is Cauchy does not require knowing what it converges to, so it can be more convenient to show a sequence is Cauchy rather than convergent.</p>
+<p>Let us prove this equivalence!</p>
+<h3 id="cauchy-leftrightarrow-convergent"><a class="header" href="#cauchy-leftrightarrow-convergent">Cauchy \(\Leftrightarrow\) Convergent</a></h3>
+<p>Suppose an infinite sequence \((a_n)\) converges to \(L\). Therefore, for any positive \(\frac{\epsilon}{2}\), there is some \(\delta &gt; 0\) such that \(||a_n - L|| &lt; \frac{\epsilon}{2}\) given \(n \ge N\). Therefore, if both \(m, n \ge N\), then we have both \(||a_m - L|| &lt; \epsilon\) and \(||a_n - L|| &lt; \epsilon\). Therefore, \(||a_m - a_n|| = ||(a_m - L) + (L - a_n)|| \le ||a_m - L|| + ||a_n - L|| = \epsilon\) demonstrates that the sequence is Cauchy.</p>
+<p>Ok, that was the easy direction. It’s harder to show Cauchy implies convergent.</p>
+<p>Suppose that \((a_n)\) is Cauchy. Therefore for any positive \(\epsilon\) there is some \(N \in \N\) that forces any \(m, n &lt; N\) to be \(\epsilon\)-close. Let us arbitrarily choose \(\epsilon = 1\). After \(N\) terms, all terms are such that \(||a_m - a_n|| &lt; \epsilon\), so \((a_n)\) is bounded, and therefore we can use <a href="week_4/./bolzano_weierstrass.html">BW</a> to state there is some converging subsequence \(a_{n_k}\) converging to \(a^*\).</p>
+<p>Now, define two positive integers \(N_1\) and \(N_2\). Let \(N_1\) be such that if \(m, n \ge N_1\) then \(||a_m - a_n|| &lt; \frac{\epsilon}{2}\), guaranteed to exist by the definition of Cauchy. Let \(N_2\) be such that if \(k \ge N_2\), then \(||a_{n_k} - a^*|| &lt; \frac{\epsilon}{2}\), which exists as the subsequence converges. Then, let \(N = \max(N_1, N_2)\) so both statements are true. Letting \(n = n_k\), we have \(||x_m - x^*|| = ||(x_m - x_{n_k}) - (x^* - x_{n_k})|| \le \epsilon\) for any \(m\) by the Triangle Inequality.</p>
+<h2 id="compactness"><a class="header" href="#compactness">Compactness</a></h2>
+<p>We define a set to be <strong>compact</strong> if it is both closed and bounded.</p>
+<h3 id="bolzano-weierstrass-v2"><a class="header" href="#bolzano-weierstrass-v2">Bolzano-Weierstrass V2</a></h3>
+<p>A set \(S \subseteq \R^n\) is compact iff every sequence in \(S\) has a subsequence that converges to a point in \(S\). Some people refer to this equivalence as Bolzano-Weierstrass instead of the theorem provided earlier.</p>
+<p>Suppose that \(S\) is compact. Therefore, it is bounded. Thus, given any subsequence in \(S\), we know from (the original) BW that there exists a converging subsequence \((x_n)\). Assume for contradiction that this subsequence converges to some \(x \not\in S \rightarrow x \in S^c\), an open set. But by the definition of an open set, there exists some radius \(r\) around \(x\) such that all points \(r\)-close to \(x\) are in \(S^c\). As the subsequence converges to \(S^c\), there is some positive integer \(N\) such that \(n \ge N\) implies all terms of the subsequence \((x_n)\) are \(r\)-close and therefore not in \(S\), contradicting that \((x_n)\) is in \(S\).</p>
+<p>Suppose that \(S\) is a set such that every sequence in \(S\) has some converging subsequence \((x_n)\) that converges to some point in \(S\). Suppose for a contradiction that \(S\) is not compact. Then it is either unbounded or open. If it is unbounded, there exists some sequence that goes to infinity and does not converge at all. If \(S\) is open but bounded, then consider a point \(x \in \partial S\). As \(S\) is open, \(x \not\in S\). However, we can construct a sequence in \(S\) that converges to \(x\) by letting \(x_n\) be any point in the ball of radius \(\frac{1}{n}\) around \(x\). By the definition of an open set, there is some positive \(r\) such that all points \(r\)-close to \(x\) are in \(S\). Thus, after a finite amount of terms, we have a sequence in \(S\) that converges to a point outside of \(S\), which is a contradiction.</p>
+<p>Here is a theorem that is a corollary to BW for sets.</p>
+<h3 id="continuous-functions-and-compactness"><a class="header" href="#continuous-functions-and-compactness">Continuous Functions and Compactness</a></h3>
+<p>Given \(f: \R^n \rightarrow \R^m\), where \(f\) is continuous, and some set \(S \subseteq \R^n\) such that \(S\) is compact, the set \(f(S): {y \in \R^m: \exists x \in \R^n (f(x) = y)}\) is also compact.</p>
+<p>To prove \(f(S)\) is compact, let \((y_n)_{n = 1}^\infty\) be any sequence in \(f(S)\), and let \((x_n)_{n = 1}^\infty\) be the corresponding sequence in \(S\). By BW for sets, this there exists some convergent subsequence \((x_{n_k})\) that converges to some \(x \in S\). As \(f\) is continuous, converging sequences map to converging sequences, so \((y_{n_k})\) converges to \(f(x) \in f(S)\), and therefore any sequence in \(f(S)\) converges to some point in \(f(S)\), and therefore \(f(S)\) is compact.</p>
+<div style="break-before: page; page-break-before: always;"></div><div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<h2 id="covering-of-s"><a class="header" href="#covering-of-s">“Covering” of S</a></h2>
+<p>Given \(S \subseteq \R^n\), a <strong>covering</strong> of \(S\) is defined to be: \(\l\{S_\alpha\r\}_{\alpha\in A}\) such that \(S \subseteq \cup_{\alpha \in A} S_\alpha\).</p>
+<h2 id="other-definitions"><a class="header" href="#other-definitions">Other definitions</a></h2>
+<p>S is complete and totally bounded (for any \(\epsilon &gt; 0\), \(\exists\lbrk B_\epsilon(x_n)\rbrk_{n = 1}^{N}\) such that \(S \subseteq \cup_{n = 1}^N B_\epsilon (x_n)\).</p>
+<p>\(A \subseteq \R^m\), \(x\) is a limit point of A if \(x \in A \setminus\lbrk x\rbrk, \forall r &gt; 0, \l(B_r(x) \setminus\lbrk x\rbrk\r)\), such that \(xₙ → x\).</p>
+<p>S is <strong>limit point compact</strong> if \(∀ A ⊆ S\), \(A\) has a limit point in \(S\).</p>
+<h2 id="heine-borel-theorem"><a class="header" href="#heine-borel-theorem">Heine-Borel Theorem</a></h2>
+<p>Given \(S \subseteq \R^n\), we say that,</p>
+<p><strong>Bolzono-Weierstrauss Property</strong>, \(\forall \l\{x_n\r\}_{n = 1}^\infty\) s.t. \( x_n_k \to x \in S\)</p>
+<p><strong>Heine-Borel Property</strong>: There exists an open covering of S.</p>
+<p>The Heine-Borel theorem states that S satisfies the Bolzono-Weierstrauss Property iff it satisfies the Heine-Borel Property.</p>
+<p>Suppose S satisfies the Bolzono-Weierstrass property. Take any \(\lbrk U_\alpha\rbrk_\alpha\).</p>
+<p><strong>Lemma</strong>: The lebergue number lemma: Given \(S\) that satisfies the Bolzano-Weierstrass property, \(\exists\epsilon &gt; 0\), \(\lbrk U_\alpha\rbrk_{\alpha\in A}\).</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-notion-of-connectedness"><a class="header" href="#the-notion-of-connectedness">The Notion of Connectedness</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<p>Or ... rather, the notion of disconnectedness.</p>
+<p>We say a set \(S \in \R^n\) is <strong><em>dis</em>connected</strong> if there exists a partition of \(S\) into some \(S_1\), \(S_2\) (that is, \(S_1 \cup S_2 = S\)) such that \(S_1 \cap \bar{S_2} = \bar{S_1} \cap S_2 = \emptyset\). Intuitively, if I can divide a set into two parts such that the two parts do not touch each other, then the set is disconnected. If a set is not disconnected, then it is <strong>connected</strong>. (No partition into two sets \(S_1 \cup S_2 = S\) satisfies \(S_1 \cap \bar{S_2} = \bar{S_1} \cap S_2 = \emptyset\).)</p>
+<p>Note: by this definition, if \(S\) is the union of the (open) unit balls centered at \((0, 0)\) and \((1, 0)\), then \(S\) is disconnected. </p>
+<h1 id="connectedness-theorems"><a class="header" href="#connectedness-theorems">Connectedness Theorems</a></h1>
+<p>Here’s a simple one. If \(S \subseteq \R\) is not an interval, then it is not connected.</p>
+<p><strong>Proof:</strong> Given \(S\) is not an interval, there exist some \(a, b, c \in \R\) such that \(a, c \in S\) and \(b \not\in S\) where \(a &lt; b &lt; c\). Therefore, consider \(S_1 = (-\infty, b) \cap S\) and \(S_2 = (b, \infty) \cap S\). Note that \(S_1 \cup S_2 = (\R \setminus \{b\}) \cap S = S\), and \(\overline{S}_1 \subseteq (-\infty, b]\), \(\overline{S}_2 \subseteq [b, \infty)\).</p>
+<p>\(b \not\in S_1\) and \(b \not\in S_2\). Therefore, we have found two sets that partition \(S\). Therefore, \(S\) is disconnected. <span style="float: right;">😃</span></p>
+<hr/>
+<p>Here’s another: Continuous functions map connected sets to connected sets. In other words, \(\left(\left(f : S \to D\right) \wedge \textsf{Continuous}(f)\right) \implies \left(\textsf{Connected}(S) \to \textsf{Connected}\left(\textsf{Image}_S(f)\right)\right)\).</p>
+<p><strong>Proof:</strong> Suppose \(D\) is disconnected: <code>TODO</code></p>
+<h1 id="the-notion-of-pathwise-connectedness"><a class="header" href="#the-notion-of-pathwise-connectedness">The Notion of Pathwise Connectedness</a></h1>
+<p>Intuitively, a set is pathwise connected if, for all points in that set, we can construct a curve between any two of them for which all points of the curve are in the set.s</p>
+<p>Formally, a set, \(S \subseteq D\) is pathwise connected iff \(\forall a, b \in S, \exists f : [0, 1] \to D, \textsf{Continuous}_D(f) \wedge f(0) = a \wedge f(1) = b\).</p>
+<p>Pathwise connectedness is also known as “arcwise connectedness”.</p>
+<blockquote>
+<p>Some sets are connected but <strong>not pathwise connected.</strong></p>
+<details><summary>
+<p>\(S = \left\{ \left(x, \sin\left(\frac{1}{x}\right)\right) : x \in (0, 1] \right\} \enspace\cup\enspace \left\{ \left(0, y\right) : y \in [-1, 1] \right\}\), for example, is connected, but not pathwise connected.</p>
+</summary>
+<iframe src="https://www.desmos.com/calculator/ur8jlwcl1d?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+<p>\(S\) cannot be divided into two non-empty sets whose closures don’t intersect, so \(S\) is connected.</p>
+<p>To see why, consider a point on the vertical line segment, \(\left\{ (0, y) : y \in [-1, 1]\right\}\). If we tried to draw a path from that point to the point \(\left(\frac{1}{\pi}, 0\right)\), we couldn’t! The path from our point to \(\left(\frac{1}{\pi}, 0\right)\) must be larger than any real quantity (to see why, look at the graph).</p>
+</details>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="continuity--but-uniform"><a class="header" href="#continuity--but-uniform">Continuity ... but <em>Uniform</em></a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<p>Let’s begin by reviewing our definition of continuity for a function \(f: S \rightarrow \R^m\) for \(S \subseteq \R^n\)</p>
+<blockquote>
+<p><strong>Continuity</strong>: \(\forall x \in S \forall \epsilon &gt; 0 \exists \delta &gt; 0 \forall y (||x - y|| &lt; \delta \implies ||f(x) - f(y)|| &lt; \epsilon)\)</p>
+</blockquote>
+<p>Importantly, our choice of \(\delta\) can depend on the specific \(x\) we are showing is continuous. Uniform continuity, on the other hand, is ever so slightly different.</p>
+<blockquote>
+<p><strong>Uniform Continuity</strong>: \(\forall \epsilon &gt; 0 \exists \delta &gt; 0 \forall x \in S \forall y (||x - y|| &lt; \delta \implies ||f(x) - f(y)|| &lt; \epsilon)\)</p>
+</blockquote>
+<p>In Uniform Continuity, our choice of \(\delta\) can only depend on \(\epsilon\) and not on \(x\). This makes uniform continuity stronger than continuity, and there are some functions that are continuous that are not uniformly continuous.</p>
+<h2 id="polynomials"><a class="header" href="#polynomials">Polynomials?</a></h2>
+<p>Consider the quadratic \(f(x) = x^2\). It obviously is continuous. Is this function uniformly continuous? The answer is actually no!</p>
+<p>If \(f(x)\) were uniformly continuous, then for every \(\epsilon &gt; 0\) there is some \(\delta &gt; 0\) so that \(||x - y|| &lt; \delta \implies ||x^2 - y^2|| &lt; \epsilon\) regardless of the choice for \(x\) and \(y\). Let \(\epsilon = 1\), and let \(y = x + \frac{\delta}{2}\). This choice of \(x\) and \(y\) satisfies \(||x - y|| &lt; \delta\), therefore we should have \(||x^2 - y^2|| = \left|x^2 - x^2 - \delta x - \frac{\delta^2}{4}\left| = \left|\delta x + \frac{\delta^2}{4}\right| &lt; 1\). However, if \(x \ge \frac{1}{\delta}\), then this inequality is false, contradicting uniform continuity.</p>
+<p>Conceptually, the reason why \(f(x) = x^2\) is not uniformly continuous is because its slope goes to infinity as \(x\) goes to infinity, so no bound for \(\delta\) will constrain \(f(x)\) to an \(\epsilon\) interval for any choice of \(x\).</p>
+<p>In fact, this observation may lead us to the following (sufficient) criteria for uniform continuity: \(f: \R \to \R\) continuous and differentiable is uniformly continuous if \(\sup_\limits{x \in \R} |f’(x)| &lt; N\) for some \(N \in \R\). That is, if the slope is bounded, then regardless of the choice of \(x\) and \(y\) that are \(\delta\)-close, the function values will also by \(\epsilon\)-close.</p>
+<p>However, infinite slope by itself isn’t enough to disprove uniform continuity ...</p>
+<h2 id="sqrt-what"><a class="header" href="#sqrt-what">Sqrt what?</a></h2>
+<p>Now let us consider the function \(f(x) = \sqrt{x}\) on \(x \in [0, \infty)\). Given \(\epsilon &gt; 0\), let \(\delta = \epsilon^2\). Then, given \(|x - y| &lt; \delta\), note that \(f(x)\) is monotonically increasing, so \(\max\limits_{|x - y| &lt; \delta}|\sqrt{x} - \sqrt{y}|\) is just \(\max\limits_{x \ge 0}|\sqrt{x + \delta} - \sqrt{x}|\), which, as the slope of \(f(x)\) is positive but strictly decreasing, is maximized at \(x = 0\). Therefore, \(\max\limits_{|x - y| &lt; \delta}|\sqrt{x} - \sqrt{y}| = |\sqrt{\delta}| = \sqrt{\epsilon^2} = \epsilon\), completing the uniform continuity proof.</p>
+<h2 id="compactness-is-sufficient"><a class="header" href="#compactness-is-sufficient">Compactness is Sufficient</a></h2>
+<p>We do have another theorem that gives us a different sufficient condition for uniform continuity. Suppose \(S \subseteq \R^n\) and \(f: S \to \R^m\) be continuous. Then, \(S\) is compact implies \(f\) is uniformly continuous.</p>
+<p><code>TODO</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="working-on-github"><a class="header" href="#working-on-github">Working on GitHub</a></h1>
+<p>Making changes to the book directly through GitHub allows members of the <code>MAT334</code> GitHub organization to contribute to this work without installing <code>mdbook</code> or <code>git</code>.</p>
+<p>Note, however, that it can take several minutes for the rendered book to update. Any change (breaking or non-breaking) will be visible to everyone. As such, this method should be reserved for new sections or small changes to existing sections.</p>
+<ul>
+<li>Navigate to the file you want to edit (on GitHub).</li>
+</ul>
+<p><img src="contributing/./directory_with_mdfiles.png" alt="Open the src folder on GitHub" />
+<img src="contributing/./choosing_a_mdfile.png" alt="Choose the file you want to edit" /></p>
+<ul>
+<li>Click <code>edit</code></li>
+</ul>
+<p><img src="contributing/./clicking_edit.png" alt="" /></p>
+<ul>
+<li>After making changes, type a descriptive message and click <code>commit</code></li>
+</ul>
+<p><img src="contributing/./clicking_commit.png" alt="" /></p>
+<ul>
+<li>If you would like to make your changes publicly available without applying them to the published copy of the notes, select “create a pull request” prior to committing.</li>
+</ul>
+<p><img src="contributing/./clicking_create_pr.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="working-locally"><a class="header" href="#working-locally">Working Locally</a></h1>
+<p>Working with the markdown for this document locally requires some setup. Let’s start by <code>cloning</code> the GitHub repository — creating a local copy on your device.</p>
+<h2 id="installing-git"><a class="header" href="#installing-git">Installing <code>git</code></a></h2>
+<p>For <code>Linux</code>, <code>MacOS</code>, and <code>Windows</code>, follow <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">this tutorial to install Git</a>. <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">Git may require additional configuration.</a></p>
+<p>You may also want to <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh">set up GitHub SSH authentication</a> so that you don’t have to supply your GitHub credentials when pushing (saving) your code to GitHub.</p>
+<h2 id="working-with-git-and-the-commandline"><a class="header" href="#working-with-git-and-the-commandline">Working with <code>git</code> and the commandline</a></h2>
+<p>On Windows, open <code>Git Bash</code>. On <code>MacOS</code> and <code>Linux</code>, open terminal window.</p>
+<ul>
+<li><code>cd</code>: Changes the working directory.
+<ul>
+<li>For example, <code>cd ./Documents</code> moves to a subfolder called <code>Documents</code>.</li>
+<li><code>cd ../</code> changes to the folder that contains the current directory (moves up one directory).</li>
+</ul>
+</li>
+<li><code>pwd</code> stands for <u>p</u>rint <u>w</u>orking <u>d</u>irectory. As its name suggests, running <code>pwd</code> prints the path to the directory you’re in.</li>
+<li><code>ls</code> lists files in the current directory.</li>
+</ul>
+<p>Now, let’s <code>clone</code> the GitHub repository:</p>
+<ul>
+<li>Choose a directory to store the contents of the <code>mdbook</code> and <code>cd</code> to it.</li>
+<li>Type <code>git clone https://github.com/MAT334A/lecture-notes.git</code>, then <code>ls</code></li>
+<li>You should see a new sub-folder named <code>lecture-notes</code>. <code>cd</code> to it.</li>
+</ul>
+<p>You’ve cloned the repository! You can now open any of the markdown files in the editor of your choice (I suggest <a href="https://code.visualstudio.com/">VisualStudio Code</a>).</p>
+<p>Make a small change in one of the markdown files (and save it!). Try running <code>git status</code>. You should see something like the following:</p>
+<pre><code class="language-git">On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+        modified:   src/SUMMARY.md
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+        src/contributing/
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+<p>Above, we can see that I have uncommitted changes in “src/contributing/”. Let’s add those changes to <code>git</code>:</p>
+<pre><code class="language-sh">bash$ git add ./src
+bash$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+        modified:   src/SUMMARY.md
+        new file:   src/contributing/mdbook_markdown.md
+        new file:   src/contributing/online_editing.md
+        new file:   src/contributing/working_locally.md
+bash$ 
+</code></pre>
+<p>Now, let’s create the <a href="https://git-scm.com/docs/git-commit"><code>commit</code></a>:</p>
+<pre><code class="language-sh">bash$ git commit --message=&quot;A concise description of the changes should go here&quot;
+bash$
+</code></pre>
+<p>Now that we’ve collected and labeled our changes, we can <code>push</code> them to <code>GitHub</code>:</p>
+<pre><code class="language-sh">bash$ git push
+</code></pre>
+<p>If <code>git</code> complains that it is unable to <code>push</code>, it’s likely that someone else has made changes to the repository that you don’t have! You need to <code>pull</code> their changes:</p>
+<pre><code class="language-sh">bash$ git pull
+</code></pre>
+<p><code>git pull</code> should give instructions for resolving conflicts (if there are any). After resolving conflicts, try pushing again.</p>
+<pre><code class="language-sh">bash$ git push
+</code></pre>
+<p>Don’t run <code>git push --force</code>. <code>git push --force</code> can overwrite changes made to the book by others.</p>
+<h2 id="downloading-mdbook"><a class="header" href="#downloading-mdbook">Downloading <code>mdbook</code></a></h2>
+<p>If you are familiar with the Rust programming language, <a href="https://rust-lang.github.io/mdBook/cli/index.html">follow this tutorial to install <code>mdbook</code></a>.</p>
+<p>If not, <a href="https://github.com/rust-lang/mdBook/releases">download <code>mdbook</code></a> from its GitHub releases page.</p>
+<ul>
+<li>Select the file for your operating system.</li>
+<li>Extract it.</li>
+<li>Copy the executable file to the folder that has <code>README.md</code>, <code>src/</code>, etc. (let’s call this the root directory of the repository).</li>
+<li>Make sure the executable’s name is in the <code>.gitignore</code> file (to see it, type <code>ls -a</code> in the commandline — it’s a hidden file).</li>
+<li>You should now be able to run <code>./mdbook</code> from the root directory of the repository (or <code>./mdbook.exe</code> if you’re on windows).</li>
+<li><code>./mdbook serve</code> will start a local server (its output will tell you its URL). Opening it in your browser lets you preview the book.
+<ul>
+<li>Changing a file should cause the served copy of the book to update.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="git-troubleshooting"><a class="header" href="#git-troubleshooting">Git Troubleshooting</a></h2>
+<h3 id="push-failure"><a class="header" href="#push-failure">Push Failure</a></h3>
+<p>Pushing can fail if the server has changes you don’t.</p>
+<p><img src="contributing/./git_push_need_fetch.png" alt="" /></p>
+<p>If this happens, you can <code>merge</code> the remote changes or <code>rebase</code> your commits on top of them. Rebasing can help keep the <code>git</code> history simple, so let’s use it.</p>
+<pre><code class="language-bash">bash$ git fetch
+bash$ git rebase
+</code></pre>
+<p><code>git fetch</code> gets the changes from the server, <strong>but doesn’t apply them</strong>. <code>git rebase</code> then applies your changes to the server’s. <a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">For more information about rebasing, see this document.</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="working-with-mdbooks-markdown"><a class="header" href="#working-with-mdbooks-markdown">Working With mdbook’s Markdown</a></h1>
+<h2 id="mathjax"><a class="header" href="#mathjax">MathJax</a></h2>
+<p><code>mdbook</code> uses MathJax to render \(\LaTeX\)-like math. It isn’t as powerful as full \(\LaTeX\).</p>
+<table>
+  <tr><th><code>\\(</code>, <code>\\)</code></th>  <td>Enter/exit <b>inline</b> math mode. Note the double-backslash!</td></tr>
+  <tr><th><code>\\[</code>, <code>\\]</code></th>  <td>Enter/exit <b>block</b> math mode.</td></tr>
+</table>
+<p>For example, to write \(e^{i\theta} = \cos \theta + i \sin \theta\) in both block and inline math mode,</p>
+<pre><code class="language-md">In inline mode, \\(e^{i\theta} = \cos \theta + i \sin\theta\\).
+
+Below this line, in block mode,
+\\[
+  e^{i\theta} = \cos\theta + i\sin\theta
+\\]
+</code></pre>
+<p>...which gives us...</p>
+<div style = "border: 1px solid grey; border-radius: 5px; padding: 4px;">
+<p>In inline mode, \(e^{i\theta} = \cos \theta + i \sin\theta\).</p>
+<p>Below this line, in block mode,
+\[
+e^{i\theta} = \cos\theta + i\sin\theta
+\]</p>
+</div>
+<p>If we want to stack equations, we use <code>\\[\begin{aligned} ... \end{aligned}\\]</code>. For example,</p>
+<p>\[
+\begin{aligned}
+&amp; 5 + x &amp;= x + 5\\
+\implies&amp; 5     &amp;=     5
+\end{aligned}
+\]</p>
+<p>...is...</p>
+<pre><code class="language-tex">
+\\[
+\begin{aligned}
+         &amp; 5 + x &amp;= x + 5\\\\
+ \implies&amp; 5     &amp;=     5
+\end{aligned}
+\\]
+</code></pre>
+<p>Note that the <code>&amp;</code> characters are used for alignment and we use <strong>four</strong> back-slashes to start a new line.</p>
+<p>This section is unfinished. For now, please reference <a href="https://github.com/MAT334A/lecture-notes/blob/main/src/week_1/cs_inequality_derivation.md?plain=1"><code>src/week_1/cs_inequality_derivation.md</code></a>.</p>
+<h2 id="including-files"><a class="header" href="#including-files">Including Files</a></h2>
+<pre><code class="language-md">{{#include file.md}}
+</code></pre>
+<p><a href="https://rust-lang.github.io/mdBook/format/mdbook.html"><code>mdbook</code> lets you include files</a>. Like a C-language <code>#include</code>, <code>mdbook</code> just removes our include statement and inserts the contents of the file we specify.</p>
+<h2 id="embedding-graphs"><a class="header" href="#embedding-graphs">Embedding Graphs</a></h2>
+<p>We can embed graphs from <a href="https://www.desmos.com/calculator"><code>Desmos</code></a> via its <code>embed</code> feature.</p>
+<p>To do this,</p>
+<ul>
+<li>
+<p>Click the <code>share</code> icon in <code>Desmos</code>
+<img src="contributing/./clicking_share_in_desmos.png" alt="" /></p>
+</li>
+<li>
+<p>Click “embed” and copy the <code>&lt;iframe ... /&gt;</code>. This <code>&lt;iframe /&gt;</code> can be pasted directly into a (<code>mdbook</code>) markdown file.
+<img src="contributing/./desmos_embed_what_to_copy.png" alt="" /></p>
+</li>
+</ul>
+<p>By default, Desmos graphs don’t have a hide/show (or a play/pause button for interactive graphs). As such, I like to put graphs in a dropdown by surrounding their <code>iframe</code> with <code>&lt;details&gt;</code> and <code>&lt;/details&gt;</code>. Let’s see an example:</p>
+<pre><code class="language-html">&lt;details&gt;
+&lt;iframe src=&quot;https://www.desmos.com/calculator/sgy4fdiswd?embed&quot; width=&quot;500&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=0&gt;&lt;/iframe&gt;
+&lt;/details&gt;
+</code></pre>
+<p>gives us</p>
+<details>
+<iframe src="https://www.desmos.com/calculator/sgy4fdiswd?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</details>
+<p>Let’s give the dropdown a descriptive title (which, unfortunately, is difficult to include MathJax in):</p>
+<pre><code class="language-html">&lt;details&gt;&lt;summary&gt;Show Graph&lt;/summary&gt;
+&lt;iframe src=&quot;https://www.desmos.com/calculator/sgy4fdiswd?embed&quot; width=&quot;500&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=0&gt;&lt;/iframe&gt;
+&lt;/details&gt;
+</code></pre>
+<p>...which gives us...</p>
+<details><summary>Show Graph</summary>
+<iframe src="https://www.desmos.com/calculator/sgy4fdiswd?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</details>
+<p><strong>When embedding graphs, it is very useful to adjust the <code>window</code> (under <code>Graph Settings</code>)!</strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="./src/script.js"></script>
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+    </body>
+</html>

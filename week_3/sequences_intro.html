@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Sequences - Math 334 Lecture Notes</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href=".././src/style.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../about.html">About</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Week 1</li><li class="chapter-item expanded "><a href="../week_1/boolean_logic.html"><strong aria-hidden="true">1.</strong> Boolean Logic</a></li><li class="chapter-item expanded "><a href="../week_1/cs_inequality_summary.html"><strong aria-hidden="true">2.</strong> Introducing the Cauchy-Schwarz Inequality</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../week_1/cs_inequality_derivation.html"><strong aria-hidden="true">2.1.</strong> Deriving it</a></li><li class="chapter-item expanded "><a href="../week_1/cs_inequality_examples.html"><strong aria-hidden="true">2.2.</strong> Using it</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Week 2</li><li class="chapter-item expanded "><a href="../week_2/projections.html"><strong aria-hidden="true">3.</strong> Inner Products and Projection</a></li><li class="chapter-item expanded "><a href="../week_2/set_definitions.html"><strong aria-hidden="true">4.</strong> Set Definitions</a></li><li class="chapter-item expanded "><a href="../week_2/set_thms.html"><strong aria-hidden="true">5.</strong> Set Theorems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../week_2/boolean_and_set_operators.html"><strong aria-hidden="true">5.1.</strong> Connecting Boolean and Set Operators</a></li><li class="chapter-item expanded "><a href="../week_2/set_open_closed_completion.html"><strong aria-hidden="true">5.2.</strong> Open, Closed, and Completion</a></li></ol></li><li class="chapter-item expanded "><a href="../week_2/limit_defs.html"><strong aria-hidden="true">6.</strong> Limit Definitions</a></li><li class="chapter-item expanded affix "><li class="part-title">Week 3</li><li class="chapter-item expanded "><a href="../week_3/proofs_with_limits.html"><strong aria-hidden="true">7.</strong> Limit Proofs</a></li><li class="chapter-item expanded "><a href="../week_3/sequences_intro.html" class="active"><strong aria-hidden="true">8.</strong> Sequences</a></li><li class="chapter-item expanded "><a href="../week_3/completeness_ax.html"><strong aria-hidden="true">9.</strong> The Completeness Axiom</a></li><li class="chapter-item expanded affix "><li class="part-title">Week 4</li><li class="chapter-item expanded "><a href="../week_4/bolzano_weierstrass.html"><strong aria-hidden="true">10.</strong> Bolzano-Weierstrass</a></li><li class="chapter-item expanded "><a href="../week_4/cauchy_compactness.html"><strong aria-hidden="true">11.</strong> Cauchy Sequences and Compactness</a></li><li class="chapter-item expanded "><a href="../week_4/section.html"><strong aria-hidden="true">12.</strong> Section</a></li><li class="chapter-item expanded "><a href="../week_4/connectedness.html"><strong aria-hidden="true">13.</strong> Connectedness</a></li><li class="chapter-item expanded affix "><li class="part-title">Week 5</li><li class="chapter-item expanded "><a href="../week_5/uniform_continuity.html"><strong aria-hidden="true">14.</strong> Uniform Continuity</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Contributing to this project</li><li class="chapter-item expanded "><a href="../contributing/online_editing.html"><strong aria-hidden="true">15.</strong> Working on GitHub</a></li><li class="chapter-item expanded "><a href="../contributing/working_locally.html"><strong aria-hidden="true">16.</strong> Working Locally</a></li><li class="chapter-item expanded "><a href="../contributing/mdbook_markdown.html"><strong aria-hidden="true">17.</strong> Working With mdbook's Markdown</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Math 334 Lecture Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/MAT334A/lecture-notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="sequences"><a class="header" href="#sequences">Sequences</a></h1>
+<div style="display: none;">
+<!-- LaTeX definitions -->
+<p>\[
+% \lv is short for “vector left”
+\def\l{\left}
+\def\r{\right}
+\def\lbrk{\{}
+\def\rbrk{\}}
+\def\lv{\left&lt;}
+\def\rv{\right&gt;}
+\def\iprod#1{\lv #1 \rv}
+\def\proj#1#2{\textsf{proj}_{#1} #2}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\abs#1{\left| #1 \right|}
+\def\T{\texttt{T}}
+\def\F{\texttt{F}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\]</p>
+</div>
+<h2 id="formal-definition-of-a-sequence"><a class="header" href="#formal-definition-of-a-sequence">Formal Definition of a Sequence</a></h2>
+<p>A sequence is a function \(f: \N \rightarrow X\) for some set \(X\). Instead of writing \(f(1), f(2), ...\) to refer to the individual terms of a sequence, it is common to use \(a_1, a_2, ...\) instead.</p>
+<h2 id="the-limit-of-a-sequence-leftrightarrow-convergence"><a class="header" href="#the-limit-of-a-sequence-leftrightarrow-convergence">The Limit of a Sequence \(\leftrightarrow\) Convergence</a></h2>
+<p>How do we understand the expression \(\lim\limits_{n \to \infty} a_n\)? Intuitively, this should equal whatever the sequence <strong>converges</strong> to, or the value that the sequences gets arbitrarily close to.</p>
+<p>We can modify the \(\epsilon\)-\(\delta\) definition as thus: \[\lim\limits_{n \to \infty} a_n = L \iff \forall \epsilon &gt; 0 \exists N \in \N : \forall n \ge N, ||a_n - L|| &lt; \epsilon\]</p>
+<p>If the limit exists, then we say the sequence <em>converges to \(L\)</em>.</p>
+<blockquote>
+<p>Finding the limit of a sequence (or even demonstrating a sequence converegs) is usually a lot harder than finding the limit of a function approaching infinity. For example, the function \(f(x) = \frac{1}{x^3\sin x}\) does not have a limit as \(x\) goes to infinity, as \(\sin x\) has infinitely many zeroes. However, it is not known whether the sequence defined by \(a_n = \frac{1}{n^3\sin n}\) converges.</p>
+<p>Loosely speaking, the resolution to this problem depends on whether or not fractional approximations for \(\pi\) improve faster than \(x^3\). The limit is known to be \(0\) for \(\frac{1}{n^k\sin x}\) for roughly \(k \ge 7.7\).</p>
+</blockquote>
+<h2 id="convergence-and-sets"><a class="header" href="#convergence-and-sets">Convergence and Sets</a></h2>
+<p>Let’s demonstrate some theorems relating sets, convergence, and continuity!</p>
+<h3 id="for-any-element-in-the-closure-there-exists-a-sequence-converging-to-it"><a class="header" href="#for-any-element-in-the-closure-there-exists-a-sequence-converging-to-it">For Any element in the Closure, There Exists a Sequence Converging to It</a></h3>
+<p>Given a subset \(S \subseteq \R^n\), \(x \in \bar{S}\) is equivalent to the existence of a sequence \({a_i} \subseteq S\) such that \(\lim\limits_{n \to \infty} a_n = x\).</p>
+<p>We are demonstrating equivalence, so we need to show two different directions. Suppose that \(x \in \bar{S}\). Remember that \(\bar{S} = S \cup \partial S\), so either \(x \in S\) or \(x \in \partial S\). If \(x \in S\), then the constant sequence <em>obviously</em> converges (regardless of the choice of \(n\), \(|a_n - x| = 0 &lt; \epsilon\) for any \(\epsilon\)). Otherwise, by the definition of \(x \in \partial S\), a ball of any positive radius centered \(x\) intersects \(S\). Define \(a_i\) as the point guaranteed to exist in the intersection of \(S\) and \(B\left(x, \frac{1}{i}\right)\). Then, for the convergence proof, let \(N = \left\lceil \frac{2}{\epsilon}\right\rceil\). Therefore, for any \(n \ge N \rightarrow \frac{2}{n} \le \epsilon\), we have \(|a_n - x| &lt; \frac{1}{n} &lt; \frac{2}{n} \le \epsilon\).</p>
+<p>Now, suppose that \(\lim\limits_{n \to \infty} a_n = x\), where \({a_i} \subseteq S\). Note that either \(x \in S\) (in which case we are done) or \(x \in S^c\). In the latter case, we just need to show that for any ball centered at \(x\), there is a point in the ball that is also in \(S\). (Note that \(x\) automatically satisfies that the intersection of the ball and \(S^c\) is non-empty.) By the definition of convergence, for any \(\epsilon &gt; 0\), there is some positive integer \(N\) such that \(n \ge N\) guarantees that \(|a_n - x| &lt; \epsilon\). Consider the ball \(B(x, \epsilon)\). By applying the definition of convergence, we can guarantee the existence of some \(n\) such that \(|a_n - x| \le \epsilon\), which implies \(a_n \in B(x, \epsilon)\). Therefore, \(S \cap B(x, \epsilon) \ne \emptyset\) and we are done.</p>
+<h4 id="obviously"><a class="header" href="#obviously">Obviously...</a></h4>
+<details>
+<summary>Dictionary of Definitions of Terms Commonly Used in Math lectures</summary>
+CLEARLY:
+I don't want to write down all the "in- between" steps.
+<p>TRIVIAL:
+If I have to show you how to do this, you’re in the wrong class.</p>
+<p>OBVIOUSLY:
+I hope you weren’t sleeping when we discussed this earlier, because I refuse to repeat it.</p>
+<p>RECALL:
+I shouldn’t have to tell you this, but for those of you who erase your memory tapes after every test...</p>
+<p>WLOG (Without Loss Of Generality):
+I’m not about to do all the possible cases, so I’ll do one and let you figure out the rest.</p>
+<p>IT CAN EASILY BE SHOWN:
+Even you, in your finite wisdom, should be able to prove this without me holding your hand.</p>
+<p>CHECK or CHECK FOR YOURSELF:
+This is the boring part of the proof, so you can do it on your own time.</p>
+<p>SKETCH OF A PROOF:
+I couldn’t verify all the details, so I’ll break it down into the parts I couldn’t prove.</p>
+<p>HINT:
+The hardest of several possible ways to do a proof.</p>
+<p>BRUTE FORCE (AND IGNORANCE):
+Four special cases, three counting arguments, two long inductions, “and a partridge in a pair tree.”</p>
+<p>SOFT PROOF:
+One third less filling (of the page) than your regular proof, but it requires two extra years of course work just to understand the terms.</p>
+<p>ELEGANT PROOF:
+Requires no previous knowledge of the subject matter and is less than ten lines long.</p>
+<p>SIMILARLY:
+At least one line of the proof of this case is the same as before.</p>
+<p>CANONICAL FORM:
+4 out of 5 mathematicians surveyed recommended this as the final form for their students who choose to finish.</p>
+<p>TFAE (The Following Are Equivalent):
+If I say this it means that, and if I say that it means the other thing, and if I say the other thing...</p>
+<p>BY A PREVIOUS THEOREM:
+I don’t remember how it goes (come to think of it I’m not really sure we did this at all), but if I stated it right (or at all), then the rest of this follows.</p>
+<p>TWO LINE PROOF:
+I’ll leave out everything but the conclusion, you can’t question ‘em if you can’t see ‘em.</p>
+<p>BRIEFLY:
+I’m running out of time, so I’ll just write and talk faster.</p>
+<p>LET’S TALK THROUGH IT:
+I don’t want to write it on the board lest I make a mistake.</p>
+<p>PROCEED FORMALLY:
+Manipulate symbols by the rules without any hint of their true meaning (popular in pure math courses).</p>
+<p>QUANTIFY:
+I can’t find anything wrong with your proof except that it won’t work if x is a moon of Jupiter (Popular in applied math courses).</p>
+<p>PROOF OMITTED:
+Trust me, It’s true.</p>
+<p><a href="https://www.math.utah.edu/%7Echerk/mathjokes.html">Credits</a></p>
+</details>
+<h3 id="continuity"><a class="header" href="#continuity">Continuity!</a></h3>
+<p>We can relate sequences in \(\R^n\) to continuity with the following theorem:</p>
+<p>Given \(S \subseteq \R^n\) and a function \(f: S \rightarrow \R^m\), \(f\) is continuous at a point \(a \in S\) if and only if for any sequence \(\{x_k\}_{k = 1}^{\infty} \in S\) that converges to \(a\), the sequence \(\{f(x_k)\}_{k = 1}^{\infty} \in \R^m\) converges to \(f(a)\).</p>
+<p>The fowards direction is fairly straightforward. Given \(f\) is continuous at \(a\), consider some fixed positive \(\epsilon\). There is some positive \(\delta\) such that for any \(y \in S\), \(||y - a|| &lt; \delta \implies ||f(y) - f(a)|| &lt; \epsilon\). If \({x_k}\) converges, then whatever \(\delta\) is, there exists some \(K \in \N\) that guarantees \(||x_k - a|| &lt; \delta\) if \(k \ge K\), guaranteeing \(||f(x_k) - f(a)|| &lt; \epsilon\).</p>
+<p>The backwards direction is more sophisticated, and uses proof by contradiction. Suppose that for any converging sequence \(\{x_k\}_{k = 1}^{\infty} \in S\) to \(a\), the sequence \(\{f(x_k)\}_{k = 1}^{\infty} \in \R^m\) converges to \(f(a)\). For contradiction, suppose that \(f\) is not continuous at \(a\). Therefore, there exists some \(\epsilon &gt; 0\) such that for any choice of \(\delta\), there is some \(y \in S\) such that both \(||y - a|| &lt; \delta\) and \(||f(y) - f(a)|| &gt; \epsilon\).</p>
+<p>Let \(x_k\) be the vector guaranteed to exists that satisfies \(||x_k - a|| &lt; \delta\) and \(||f(x_k) - f(a)|| &gt; \epsilon\) for \(\delta = \frac{1}{k}\). As when \(k\) gets arbitrarily big, \(\delta\) becomes arbitrarily close to \(0\), we have a sequence that converges to \(a\), but violates the condition that \(\{f(x_k)\}_{k = 1}^{\infty} \in \R^m\) converges to \(f(a)\). Contradiction, therefore, we must have \(f\) continuous at \(a\).</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../week_3/proofs_with_limits.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../week_3/completeness_ax.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../week_3/proofs_with_limits.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../week_3/completeness_ax.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src=".././src/script.js"></script>
+    </body>
+</html>

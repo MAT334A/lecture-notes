@@ -1,0 +1,24 @@
+/*
+ Additional styling for the notes.
+ Most of the styling is handled for us by `mdbook`, but
+ here, some things are adjusted.
+ */
+
+/* Let the user know that dropdowns are clickable! */
+details {
+    cursor: pointer;
+}
+
+/*
+ See https://css-tricks.com/two-issues-styling-the-details-element-and-how-to-solve-them/#the-css-reset-fix.
+ This should make markdown in the dropdown not have its own line.
+ */
+details summary > * {
+    display: inline;
+}
+
+@media print {
+    details * {
+        display: auto;
+    }
+}
