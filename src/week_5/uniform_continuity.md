@@ -16,7 +16,7 @@ In Uniform Continuity, our choice of \\(\delta\\) can only depend on \\(\epsilon
 
 Consider the quadratic \\(f(x) = x^2\\). It obviously is continuous. Is this function uniformly continuous? The answer is actually no!
 
-If \\(f(x)\\) were uniformly continuous, then for every \\(\epsilon > 0\\) there is some \\(\delta > 0\\) so that \\(||x - y|| < \delta \implies ||x^2 - y^2|| < \epsilon\\) regardless of the choice for \\(x\\) and \\(y\\). Let \\(\epsilon = 1\\), and let \\(y = x + \frac{\delta}{2}\\). This choice of \\(x\\) and \\(y\\) satisfies \\(||x - y|| < \delta\\), therefore we should have \\(||x^2 - y^2|| = \left|x^2 - x^2 - \delta x - \frac{\delta^2}{4}\left| = \left|\delta x + \frac{\delta^2}{4}\right| < 1\\). However, if \\(x \ge \frac{1}{\delta}\\), then this inequality is false, contradicting uniform continuity.
+If \\(f(x)\\) were uniformly continuous, then for every \\(\epsilon > 0\\) there is some \\(\delta > 0\\) so that \\(||x - y|| < \delta \implies ||x^2 - y^2|| < \epsilon\\) regardless of the choice for \\(x\\) and \\(y\\). Let \\(\epsilon = 1\\), and let \\(y = x + \frac{\delta}{2}\\). This choice of \\(x\\) and \\(y\\) satisfies \\(||x - y|| < \delta\\), therefore we should have \\(||x^2 - y^2|| = \left|x^2 - x^2 - \delta x - \frac{\delta^2}{4}\right| = \left|\delta x + \frac{\delta^2}{4}\right| < 1\\). However, if \\(x \ge \frac{1}{\delta}\\), then this inequality is false, contradicting uniform continuity.
 
 Conceptually, the reason why \\(f(x) = x^2\\) is not uniformly continuous is because its slope goes to infinity as \\(x\\) goes to infinity, so no bound for \\(\delta\\) will constrain \\(f(x)\\) to an \\(\epsilon\\) interval for any choice of \\(x\\).
 

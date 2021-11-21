@@ -33,6 +33,10 @@
 
 # Week 5
 - [Uniform Continuity](./week_5/uniform_continuity.md)
+- [Differentiability](./week_5/differentiability.md)
+
+# Week 6
+- [Mean Value Theorem](./week_6/mean_value_theorem.md)
 
 ----
 
