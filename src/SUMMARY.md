@@ -37,6 +37,7 @@
 
 # Week 6
 - [Mean Value Theorem](./week_6/mean_value_theorem.md)
+- [L'Hôpital's Rule](./week_6/lhôpital’s_rule.md)
 
 ----
 
