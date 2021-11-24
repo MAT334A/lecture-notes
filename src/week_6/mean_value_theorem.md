@@ -52,7 +52,7 @@ As such, because there exists \\(c \in (a, b)\\) where \\(h'(c) = 0\\),\\[
 Note that the last implication holds because we require \\(g(b) - g(a) \neq 0\\) and \\(\forall x \in (a, b) g'(x) \neq 0\\). As such, \\(\frac{g'(c)}{g'(c)} = 1\\) and so, \\[
     \frac{f'(c)}{g'(c)} = \frac{f(b) - f(a)}{g(b) - g(a)}
 \\]
-... as desired.
+... as desired. <span class="qed"></span>
 
 > Application: Approximation
 > `TODO`

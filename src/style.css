@@ -17,6 +17,14 @@ details summary > * {
     display: inline;
 }
 
+/*
+ "As desired" statement.
+ */
+span.qed:after {
+    content: "☺";
+    float: right;
+}
+
 @media print {
     details * {
         display: auto;
